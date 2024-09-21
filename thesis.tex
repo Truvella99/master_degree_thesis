@@ -26,6 +26,13 @@
 
 \input{common/font_config.tex}
 
+\addbibresource{bibliography.bib}  
+% REMOVE TO USE DEFAULT BIBLOGRAPHY FONT SIZE
+\defbibheading{bibliography}{%
+  \newpage
+  \section*{\fontsize{16pt}{20pt}\selectfont{\textbf{Bibliography}}} % Customize the size and title here
+}
+
 \begin{document}%\layout
 
 \english
@@ -35,5 +42,7 @@
 \input{common/toptesi_config}
 
 \input{content/chapters.tex}
+
+\printbibliography
 
 \end{document}
