@@ -1,22 +1,52 @@
+% Table Of Content Customization
+% Disable chapter numbers for sections
+\renewcommand{\thechapter}{}
+
+% Remove the dot before section numbers
+\renewcommand{\thesection}{\arabic{section}}  % Section number without leading zero
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}  % Subsection format
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}  % Subsubsection format
+
+% Ensure sections and subsections are numbered
+\setcounter{secnumdepth}{3}  % Allow numbering for sections and subsections
+\setcounter{tocdepth}{3}
+
+% Change TOC Title
+\renewcommand{\contentsname}{Contents}
+% Change TOC font size
+\makeatletter
+\renewcommand{\tableofcontents}{%
+    % Custom font size for the Summary header
+    {\fontsize{16pt}{20pt}\selectfont{\textbf{\contentsname}}}  % Header font size and centering
+    \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+    \vspace{0.1cm}  % Adjust vertical space between the header and the line
+    \noindent\hrulefill  % Horizontal line between header and items
+    \vspace{0.5cm}  % Space between the line and TOC items 
+    % Custom font size for TOC items
+    {\fontsize{10pt}{12pt}\selectfont  % Items font size and line spacing
+    \@starttoc{toc}%
+    }%
+}
+\makeatother
+
 \begin{titlepage}
     \newgeometry{left=1cm,right=1cm,top=3cm,bottom=3.5cm}  %specific margins for this page
     
     \begin{center}
     
     {\huge POLITECNICO DI TORINO}\\[1.5cm]
-    \textbf{Corso di Laurea Magistrale\\in Ingegneria Informatica}\\[3cm]
+    \textbf{Master’s degree\\in Computer Engineering}\\[3cm]
     
-    {\Large Tesi di Laurea Magistrale}\\[0.5cm]
-    \textbf{\LARGE Titolo }\\[2cm]
+    {\Large Master's Degree Thesis}\\[0.5cm]
+    \textbf{\LARGE Title }\\[2cm]
     \includegraphics[width=0.5\textwidth]{./images/logo/logoPoliTo_with_name_2021.jpg}
     \vspace{2cm}
     
     
     \begin{minipage}{0.85\textwidth}
     \begin{flushleft}\large
-    \textbf{Relatori} \hfill \textbf{Candidato}\\
-    prof. Nome Cognome \hfill Nome Cognome\\
-    prof. Nome Cognome \\
+    \textbf{Supervisor} \hfill \textbf{Candidate}\\
+    prof. Maurizio Morisio \hfill Domenico Gagliardo\\
     \textit{firma dei relatori} \hfill \textit{firma del candidato}\\[0.35cm]
     %\fillin\ \hfill \\
     %\fillin\ \hfill \fillin
@@ -25,9 +55,15 @@
     
     \vfill
     
-    Anno Accademico 2023-2024
+    Academic Year 2023-2024
     \end{center}
     
     \restoregeometry %restor default margins 
     
-    \end{titlepage}
+\end{titlepage}
+
+\begin{titlepage}
+    
+\tableofcontents
+
+\end{titlepage}
