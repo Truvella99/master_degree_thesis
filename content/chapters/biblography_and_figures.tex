@@ -1,0 +1,22 @@
+% REMOVE TO USE DEFAULT BIBLOGRAPHY FONT SIZE
+\defbibheading{bibliography}{%
+  \newpage
+  \phantomsection % Ensures the correct link location
+  \section*{\headerFont{Bibliography}} % Customize the size and title here
+}
+
+\phantomsection % Ensures the correct link location
+\printbibliography
+\addcontentsline{toc}{section}{Bibliography} % Adds Bibliography to ToC
+
+\newgeometry{top=1.2cm,right=3.3cm} % Set custom margins for the LoF
+% Custom command to display the List of Figures
+\begingroup
+  \phantomsection % Create anchor for ToC entry
+  \addcontentsline{toc}{section}{\itemFont{List of Figures}} % Adds List of Figures to ToC with custom formatting
+  \renewcommand{\listfigurename}{\headerFont{List of Figures}}
+  \renewcommand{\addtocontents}[2]{} % hide the default one
+  \listoffigures % Generates the List of Figures but does not add it to the ToC
+\endgroup
+
+\restoregeometry

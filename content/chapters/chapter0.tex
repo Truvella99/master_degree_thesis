@@ -14,11 +14,11 @@
 % Change TOC Title
 \renewcommand{\contentsname}{Contents}
 % Change TOC font size
-% REMOVE TO USE DEFAULT HEADER AND ITEMS FONT SIZE 
+% REMOVE TO USE DEFAULT HEADER AND ITEMS TOC FONT SIZE 
 \makeatletter
 \renewcommand{\tableofcontents}{%
     % Custom font size for the Summary header
-    {\fontsize{16pt}{20pt}\selectfont{\textbf{\contentsname}}}  % Header font size
+    {\headerFont{\contentsname}}  % Header font size
     \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
     \vspace{0.1cm}  % Adjust vertical space between the header and the line
     \noindent\hrulefill  % Horizontal line between header and items
