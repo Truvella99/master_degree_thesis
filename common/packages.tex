@@ -5,8 +5,23 @@
 \usepackage{lmodern}
 
 % bibliography
-\usepackage[hyperref=true,backref=true,backend=biber,maxbibnames=9,maxcitenames=2,style=numeric,citestyle=numeric,sorting=none]{biblatex} % hyperref uses links, backref goes back to citations, uses biber as backend, with 9 names at most in bibliography and 2 in citations, citing using numbers, and sorting in citation order
-% sorting can be also ydnt for year descending, name, title or ynt for ascending year
+\usepackage[hyperref=true,backref=true,backend=biber,maxbibnames=9,maxcitenames=2,style=ieee,citestyle=numeric,sorting=none]{biblatex}
+% Customizing backref output
+\DefineBibliographyStrings{english}{
+    backrefpage = {\thefield{backref}}, % Formatting for single backref
+    backrefpages = {\thefield{backref}}  % Formatting for multiple backrefs
+}
+% Adjusting the format of back-references
+\renewbibmacro*{pageref}{%
+    \iflistundef{pageref}
+    {}
+    {\printtext[brackets]{%
+            \printlist{pageref}}}}
+\renewbibmacro*{finentry}{%
+    \iffieldundef{pageref}
+    {}
+    {\addspace\printtext[brackets]{\printlist{pageref}}}%
+    \finentry}
 
 \usepackage{adjustbox} % to resize boxes by keeping the same aspect ratio
 \usepackage{algorithm} % algorithm environment
