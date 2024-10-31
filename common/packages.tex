@@ -22,6 +22,16 @@
     {}
     {\addspace\printtext[brackets]{\printlist{pageref}}}%
     \finentry}
+% Redefine \cite to make text and number blue
+\usepackage{xcolor} % for color
+\usepackage{etoolbox}
+\usepackage{hyperref} % for hyperlinks
+\makeatletter
+\let\oldcite\cite
+\AtBeginDocument{
+    \renewcommand{\cite}[1]{\textcolor{blue}{\hypersetup{citecolor=blue}\oldcite{#1}}}
+}
+\makeatother
 
 \usepackage{adjustbox} % to resize boxes by keeping the same aspect ratio
 \usepackage{algorithm} % algorithm environment
