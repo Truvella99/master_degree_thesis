@@ -1,7 +1,9 @@
 # Master-Degree-Thesis
 
-Master’s thesis of the artificial intelligence and data analitycs course at the Politecnico di Torino. 
-### TODO: add thesis argument and purpose
+Master’s thesis of the artificial intelligence and data analitycs course at the Politecnico di Torino. Purpose of the thesis is too describe the implementation of a cross platform application to support a healtier lifestyle. After a general overview about health guidelines and the system (design, requirement, ...) the thesis discuss about the actual implementation of the app, the achieved performances and eventual future addition that will be performed. <br> 
+The technological stack used is <a href='https://dart.dev/' target='_blank'>Dart</a> as programming language by leveraging on the <a href='https://flutter.dev/' target='_blank'>Flutter</a> framework, and using <a href='https://firebase.google.com/' target='_blank'>Firebase</a> as backend for the application. 
+
+### TODO: review thesis argument and purpose if something change
 The thesis was realized using the <a href='https://www.latex-project.org/' target='_blank'>Latex</a> language and <a href='https://code.visualstudio.com/' target='_blank'>VsCode</a> as text editor.
 
 ### [See The Thesis](thesis.pdf)
