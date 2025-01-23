@@ -8,6 +8,16 @@ The thesis was realized using the <a href='https://www.latex-project.org/' targe
 
 ### [See The Thesis](thesis.pdf)
 
+# Cose che ho fatto solo io
+- Grafico sleep
+- soglia massima per grafici a barre (per activity sleep e food), layout barre sopra soglia e rimossa linea trattegiata per le label
+- Input field fatti numerici quantomeno per prevenire errori
+- Goal firebase + integrazione con soglia massima (i goal sono la soglia massima dei grafici)
+- creazione tab e suddivisione in health measures
+- grafico respiratory rate in sezione health measures tab polmoni (soglia max a 50)
+- form panas per grafico emozionale con slider + save firebase dei dati
+- backup dati health su firebase storage con workmanager (backup locale, schedulazione workmanager, backup su cloud firebase storage con workmanager, necessario perchè Health non leggere i permessi su isolate diversi e workmanager ne crea uno a parte).
+
 # TO Rerun the Bibliography in case of \cite errors
 ``` latex
 pdflatex thesis.tex
