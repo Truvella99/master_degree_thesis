@@ -1,1 +1,113 @@
-\section{Results}
+\section{Technology Stack}
+This chapter covers the software technologies used for developing the mobile app.
+\subsection{Framework}
+% se facciamo frontend diventa frameworks con anche react
+\subsubsection{Flutter}
+
+\begin{wrapfigure}{l}{0.21\textwidth} % 'l' for left alignment, width of the wrapped area
+    \centering
+    \includegraphics[width=\linewidth]{images/flutter.png}
+    \caption{Logo of the Flutter\\Framework.}
+\end{wrapfigure}
+
+In order to develop the application, the flutter framework was employed. Flutter is an open-source framework created by Google. It allows to build applications that are natively compiled for mobile, web, embedded and desktop from a single codebase. The flutter code compiles into ARM, Intel machine code or JavaScript, depending on the machine for better performance on any device. It gives also the possibility to fine control the layout to be able to create a customized, adaptive designs that look and feel great on any screen. It is also very productive from the developer point of view, thanks to the hot reload feature, that allows to see the changes in real-time without losing any state. The developer experience is also enhanced by automated testing and developer tools that further allow to build production-quality apps. Among these the most relevant are widget and layout inspectors, network and memory profilers, extensive docs, the pub package manager (see \cref{subsubsec:pub}) as well as lots of pre-built widgets and layouts in the SDK. The framework is widely known for its stability and reliability: infact, it is used by Google who made it but also trusted by other well-known brands around the world, and maintained by a community of global developers, giving the possibility to collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help wherever you need it. The framework also offer a seamless integration with google services, allowing to streamline development and reach a wider audience. Among these services Firebase, Google Ads, Google Play, Google Pay, Google Wallet, Google Maps stand out. The framework is based upon Dart (see \cref{subsubsec:dart}) as programming language \cite{Flutter}. To practically use Flutter, just install the Flutter SDK, which includes the full Dart SDK, and then configure any text-editor or integrated development environment (IDE) combined with Flutter's command-line tools. However, most popular options that include also a guided setup are Android Studio, IntelliJ IDEA, and Visual Studio Code \cite{FlutterGetStarted}.
+\newpage  
+
+\subsection{Programming Languages}
+\subsubsection{Dart}
+\label{subsubsec:dart}
+
+\begin{wrapfigure}{l}{0.21\textwidth} % 'l' for left alignment, width of the wrapped area
+    \centering
+    \includegraphics[width=\linewidth]{images/dart.png}
+    \caption{Logo of the Dart\\Programming\\Language.}
+\end{wrapfigure}
+
+The programming language on which Flutter is based upon and that makes possible most of his features is dart. Dart is a client-optimized language for making fast apps on any platform and try to offer the most productive programming language for multi-platform development, along with a flexible execution runtime platform. Dart is the foundation of FLutter, but also helps in several core delevoper tasks like formatting, analyzing and testing code. Among his features, the most interesting surely are the instant hot reload, that thanks to the Dart VM reflect immeditely any code change, and the possibility to build application for different devices but from a single codebase. 
+
+\begin{figure*}
+    \includegraphics[width=1.0\linewidth]{./images/dart_platforms.png}
+    \caption{Overview of all the devices that dart is able to reach.}
+    \label{fig:dartPlatforms}
+\end{figure*}
+
+\noindent As we can see from \cref{fig:dartPlatforms}, the devices covered by a single code base range from embedded device architectures to mobile and laptop devices (by using Dart VM with just-in-time (JIT) compilation and an ahead-of-time (AOT) compiler) to web applications, with his web compiler that translate Dart into JavaScript or WebAssembly. Additionally, the language is type safe, so it uses static type checking to ensure that a variable's value always matches the variable's static type. This is done without sacrificing flexibility, since the language still permits the use of a dynamic type combined with runtime checks, which can be useful during experimentation or for code that needs to be especially dynamic, through the usage of the \texttt{dynamic} keyword. The language has also built-in null safety, so values can't be null unless the programmer explicitly say they can be. In this way dart can protect from null exceptions at runtime through static code analysis. Unlike other null-safe languages, this non-nullability is also retained at runtime, so if dart determines that a variable is non-nullable, that variable can never be null. The language also comes with a mature and complete \texttt{async-await} syntax for UI with event-driven code, all paired with a concurrency system based on dart isolates (separates memory-isolated threads of execution used to achieve concurrency). Dart comes with a rich set of libraries, ranging from core libraries (\texttt{dart:core}) from the ones to parse json (\texttt{dart:convert}), for concurrency (\texttt{dart:isolate}), web (\texttt{package:web}) and so on \cite{Dart}.
+
+\subsubsection{Groovy}
+
+\begin{wrapfigure}{l}{0.21\textwidth} % 'l' for left alignment, width of the wrapped area
+    \centering
+    \includegraphics[width=\linewidth]{images/groovy.png}
+    \caption{Logo of the Groovy\\Programming\\Language.}
+\end{wrapfigure}
+
+Groovy is an object-oriented programming language, with dynamic typing for the Java Platform, alternative to the Java language. It can also be employed as a scripting language, intended to manage application automations for the Java Platform. The language also has features similar to languages such as Python, Ruby, Perl, and Smalltalk. Based on the Java platform, the language uses a Java-like syntax, based on curly brackets and is dynamically compiled in bytecode via the Java Virtual Machine. The Groovy compiler can be used to generate standard Java bytecode to interoperate seamlessly on any Java project. Among his features, the interoperability with java (java files are valid groovy files) makes him very versatile, but groovy code can be more compact. It is characterized by object-oriented features (like operator overloading and polymorphic iteration) as well as safe navigation operator \texttt{?.} to check automatically for null pointers. The latest versions add the support to newer features like modularity, static compilation, type checking and mullticatch blocks. Groovy has also native support of markup languages such as XML and HTML by using an inline Document Object Model (DOM) syntax. A Groovy script is fully parsed, compiled, and generated all before execution (similarly to Pyrthon and Ruby) and differently from Java, a groovy source code file can be executed as an uncompiled script under some circumstances\cite{Groovy}. Groovy is also used in the Gradle build system (see \cref{subsubsec:gradle}), which is the official build system for Android applications, and it is used to define the build configuration and dependencies for the android part of the project.  
+
+\subsubsection{Ruby}
+
+\begin{wrapfigure}{l}{0.21\textwidth} % 'l' for left alignment, width of the wrapped area
+    \centering
+    \includegraphics[width=\linewidth]{images/ruby.png}
+    \caption{Logo of the Ruby\\Programming\\Language.}
+\end{wrapfigure}
+
+Ruby is an high-level, interpreted and general-purpose programming language, designed by having in mind the programmer productivity, simplicity and fun, but also minimizing programmer work and possible confusion. In Ruby, everything is an object, also primitive data types. The language is dynamically typed, uses garbage collection and just-in-time compilation and it is a multi-paradigm programming language by allowing procedural, object-oriented, and functional programming. Since in ruby everything is an object, everything has certain built-in abilities called methods. Every function is a method, methods are always called on an object and methods defined at the top level scope become methods of the object class. Ruby also supports inheritance with dynamic dispatch, mixins and singleton methods, but does not support multiple inheritance. However there is still the possibility for classes to import modules as mixins. Among its other most relevant features we have dynamic and duck typing which allows variables to hold objects of any type and change types at runtime, garbage collection that automatically manages memory, reducing the need for manual memory management and helping prevent memory leaks. Also robust exception handling mechanisms are provided using \texttt{begin,rescue,ensure} and \texttt{raise}, allowing developers to gracefully handle runtime errors, and operator overloading, giving the possiblity to redefine the behavior of operators for their custom classes, providing more intuitive and readable code. Finally, concurrent programming support is enabled through native thread and fibers and a package manager (called RubyGems) is used to provide a standardized way to distribute, install, and manage Ruby libraries and applications\cite{Ruby}. Ruby is also used in the CocoaPods build system (see \cref{subsubsec:cocoapods}), which is the official build system for iOS applications, and it is used to define the build configuration and dependencies for the iOS part of the project.
+\subsubsection{Yaml for flutter pub package manager}
+
+\begin{wrapfigure}{l}{0.21\textwidth} % 'l' for left alignment, width of the wrapped area
+    \centering
+    \includegraphics[width=\linewidth]{images/yaml.png}
+    \caption{Logo of the Yaml\\Language.}
+\end{wrapfigure}
+
+YAML is a data serialization language that is human readable. His common usage regards configuration files and applications where data is being stored or transmitted. The language targets many of the same communications applications as Extensible Markup Language (XML) but his minimal syntax differs from Standard Generalized Markup Language (SGML). The language also supports JSON style inside the same file. In Yaml custom data types are allowed but tipically they are not needed, since the language natively encodes scalars (strings, integers, and floats), lists, and associative arrays (so maps, dictionaries or hashes) all based on the Perl language. In particular, there is the possibility for both lists and associative arrays to form nested structures. It reuses escape sequences like in C and uses whitespace wrapping for multi-line strings like in HTML. Read and write support of Yaml is available for many programming languages and editors, where their extension is tipically \texttt{.yaml} or \texttt{.yml}. Regarding the syntax, whitespace indentation is used for denoting structure like in Python and typically uses UTF-32 encoding in order to have JSON compatibility. It is possible to comment a line with the \texttt{\#} character, use strings with single or double quotes, and specify lists and arrociative arrays respectively through square brackets (\texttt{[...]}) or curly braces (\texttt{\{...\}})\cite{Yaml}. In the project, Yaml is used to define the dependencies in the \texttt{pubspec.yaml} file, which is the configuration file for the Flutter pub package manager (see \cref{subsubsec:pub}).
+
+\subsection{Automation Dependencies Tools}
+While dependency management on the project was mainly done by using the pub package manager (see \cref{subsubsec:pub}), native Android/iOS plugins require Gradle (Android) and CocoaPods (iOS) behind the scenes as additional tools. In this section these tools and their functionalities will be covered.
+
+\subsubsection{Pub Package Manager}
+\label{subsubsec:pub}
+
+For managing dependencies in our project at the project level, the pub package manager has been employed. It uses a \texttt{.yaml} file (pubspec.yaml) to list the dependencies and has a command-line interface that works both for flutter framework and dart programming language (in our case we exploited it with flutter). The syntax is relatively simple and it works by using the \texttt{pub} command followed by a subcommand. \newline There are several subcommands that are divided into three main categories, based on functionalities\cite{Pub}:
+\vspace{3ex}
+\begin{itemize}[nosep]
+    \item \textbf{Managing Package Dependencies:} in this category the most relevant are the \texttt{get} or \texttt{upgrade} commands, that respectively fetch or upgrade the dependencies that are used by a package. Also other commandss are available, like \texttt{downgrade} to downgrade the dependencies at their lowest version for testing, or dually \texttt{upgrade} that upgrades the dependencies to their highest version. 
+    \item \textbf{Running command-line apps:} in this category fall the \texttt{global} command, which allows to make a package globally available, so that is possible to run scripts from his bin directory (the directory must also be added to the PATH variables).
+    \item \textbf{Deploying packages and apps:} the \texttt{publish} command here is used to share developed dart packages with the community. This is done by uploading the package to the \href{https://pub.dev/}{pub.dev website}, acting as a package repository where all developer can download the published packages. 
+\end{itemize}
+
+\subsubsection{Gradle}
+\label{subsubsec:gradle}
+
+\begin{wrapfigure}{l}{0.21\textwidth} % 'l' for left alignment, width of the wrapped area
+    \centering
+    \includegraphics[width=\linewidth]{images/gradle.png}
+    \caption{Logo of the Gradle\\Automation\\Tool.}
+\end{wrapfigure}
+
+For managing dependencies/plugins in our project on the android part of the project, gradle has been employed. Gradle is a build automation tool for software development which uses either Groovy or Java/Kotlin as language (in our case we leveraged on Groovy). It offers support for all phases of a build process, from compilation to verification, dependency resolving but also test execution, source code generation, packaging and publishing. Gradle is a multi-language tool, supporting languages like Java, Kotlin, Groovy, Scala, C, C++ and Javascript. Gradle operates with his own domain-specific language inc ontrat with the maven approach with XML. It has been designed to handle multi-project builds, that can be very large. Infact, it supports a series of build tasks that can run serially or in parallel, and build components can be also cached. Regarding his main features, gradle follows a convention (folder structure of the project, standard tasks and their order as well as dependency repositories) over configuration approach, all the build phases can be described in short configuration files. All conventions can still be overriden if it is necessary. One crucial gradle component is the plugin, that allow to integrate a set of configurations and tasks into a project, and can be either downloaded from a central plugin repository or custom-developed\cite{Gradle}.
+
+\subsubsection{CocoaPods}
+\label{subsubsec:cocoapods}
+
+\begin{wrapfigure}{l}{0.21\textwidth} % 'l' for left alignment, width of the wrapped area
+    \centering
+    \includegraphics[width=\linewidth]{images/cocoapods.png}
+    \caption{Logo of the CocoaPods\\Dependency\\Manager.}
+\end{wrapfigure}
+
+For managing dependencies/plugins in our project on the android part of the project, cocoapods has been employed. CocoaPods is an application level dependency manager for Objective-C, Swift and other languages that uses Objective-C as runtime (like RubyMotion), is written in Ruby and uses it to manage the dependencies. It provides a standard format for managing external libraries and is inspired by the RubyGems and Bundler combination. CocoaPods is executed through the command line and installs the application dependencies by specifying them rather than copying source files. The dependencies are specified into a text file (Podfile). CocoaPods will then recursively resolves dependencies between libraries and then fetch the needed source code. His dependency resolution system is powered by Molinillo, which is also used by other large projects such as Bundler and RubyGems\cite{CocoaPods}.
+
+\subsection{Integrated Development Environment}
+\subsubsection{User Interface}
+\subsubsection{Functionalities}
+\subsection{Dependencies}
+\subsubsection{Library1 Involved}
+\subsubsection{Library2 Involved}
+\subsection{Integrations}
+\subsubsection{Google Firebase}
+Firebase Authentication Service
+Google Firebase Storage
+Google Firebase RealTime Database
+\subsubsection{Health Connect}
+\subsubsection{Apple Health}

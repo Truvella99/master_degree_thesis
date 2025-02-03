@@ -17,6 +17,10 @@ The thesis was realized using the <a href='https://www.latex-project.org/' targe
 - grafico respiratory rate in sezione health measures tab polmoni (soglia max a 50)
 - form panas per grafico emozionale con slider + save firebase dei dati
 - backup dati health su firebase storage con workmanager (backup locale, schedulazione workmanager, backup su cloud firebase storage con workmanager, necessario perchè Health non leggere i permessi su isolate diversi e workmanager ne crea uno a parte).
+- Meccanismo invio notifiche (senza gestione dei vari widget, fatto insieme)
+- Player Youtube (YoutubeContainer etc in youtube_utils in notifications)
+- body test balance widget in notifications
+- gestione storico grafici weight e waist circumference con fetch dati e save che salva sia in storico che profilo  
 
 # TO Rerun the Bibliography in case of \cite errors
 ``` latex
@@ -25,6 +29,25 @@ biber thesis
 pdflatex thesis.tex
 pdflatex thesis.tex
 ```
+
+# mettere interlinea a 1.5
+``` latex
+\documentclass{article}
+\usepackage{setspace}
+
+\begin{document}
+
+\doublespacing
+This is double spaced text.
+
+\onehalfspacing
+This is one and a half spaced text.
+
+\singlespacing
+This is single spaced text.
+
+\end{document}
+``` 
 
 # Mettere in implementazione come strategia utilizzata
 @article{WearableDevicesOsDiffusion,
