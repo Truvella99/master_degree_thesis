@@ -1,6 +1,6 @@
 \newpage
 \section{System Specifications}
-This section of the elaborate will involve the discussion of the system requirements, as well as how the system have been designed. Finally, the technological stack and the major tools adopted for the project will be covered, such as the programming languages, IDE, libraries, automation dependency tools.
+% This section of the elaborate will involve the discussion of the system requirements, as well as how the system have been designed.
 \subsection{System Requirements}
 Given the fact that this project was already existing, it had some implemented features (and consequently some basic requirements related to them), our work was based on extending the app capabilities by implementing new features or refactor existing ones. \newline Considering this aspect, I will classify the functional requirements that regards our work as follows:
 % 
@@ -23,9 +23,9 @@ Given the fact that this project was already existing, it had some implemented f
         \hline
         FR 1.5 & Notification System & Allow a user to receive notification with different frequencies to prompt him into inserting data regarding food, emotional aspect, balance capability, strenght capability. \\
         \hline
-        FR 1.6 & \textcolor{red}{Assessment} & Allow a user to visualize a periodic assessment produced thanks to the data that were previously inserted. \\
+        FR 1.6 & Assessment & Allow a user to visualize a periodic assessment produced thanks to the data that were previously inserted. \\
         \hline
-        FR 1.7 & \textcolor{red}{User Registration} & Allow a user to enter his demographics (age,sex,...) and body (height,weight,...) data when the registration is in progress. \\
+        FR 1.7 & User Registration & Allow a user to enter his demographics (age,sex,...) and body (height,weight,...) data when the registration is in progress. \\
         \hline
     \end{tabular}
     \caption{Overview of Functional Requirements related to the User Management.}
@@ -48,13 +48,13 @@ Given the fact that this project was already existing, it had some implemented f
         \hline
         FR 2.4 & Health Data Backup & Added the necessary logic to perform a backup of the users's health data. \\
         \hline
-        FR 2.5 & \textcolor{red}{Food Data Integration} & Allow a user to insert his food data once received the notification. \\
+        FR 2.5 & Food Data Integration & Allow a user to insert his food data once received the notification. \\
         \hline
-        FR 2.6 & \textcolor{red}{Emotional Data Integration} & Allow a user to insert his emotional data once received the notification. \\
+        FR 2.6 & Emotional Data Integration & Allow a user to insert his emotional data once received the notification. \\
         \hline
-        FR 2.7 & \textcolor{red}{Balance Capability Data Integration} & Allow a user to insert his balance capability data once received the notification. \\
+        FR 2.7 & Balance Capability Data Integration & Allow a user to insert his balance capability data once received the notification. \\
         \hline
-        FR 2.8 & \textcolor{red}{Strenght Capability Data Integration} & Allow a user to insert his strength capability data once received the notification. \\
+        FR 2.8 & Strenght Capability Data Integration & Allow a user to insert his strength capability data once received the notification. \\
         \hline
     \end{tabular}
     \caption{Overview of Functional Requirements related to the Data Management.}
@@ -103,22 +103,21 @@ Focusing on the system architecture and his design, it can be summarized as foll
 \end{figure*}
 
 \noindent We can clearly distinguish the two main use cases (Android and IOS) with their distinguishing components and the common ones:
-
+\vspace{3ex}
 \begin{itemize}[nosep] % 'nosep' removes extra spacing between items
-    \item Android Architecture:\vspace{2ex}
+    \item Android Architecture:
           \begin{itemize}[nosep]
               \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage the health data on Android, that further interacts with google fit server whenever is needed.
               \item \textbf{Google Fit} server, used among the health connect app data sources.
               % Questo eprchè nei settings di health connect si può scegliere se usare google fit e altre sorgenti anche la nostra app c'è
           \end{itemize}
-          \vspace{3ex}
-    \item IOS Architecture:\vspace{2ex}
+    \item IOS Architecture:
           \begin{itemize}[nosep]
               \item \textbf{Apple IPhone} that represent the physical smartphone, along with his operating system, our application installed and apple health installed, used to manage the health data on IOS, that interacts with apple health server whenever is needed.
               \item \textbf{Apple Health} server, used as data source for the apple health application.
           \end{itemize}
-          \vspace{10ex}
-    \item Common Components:\vspace{2ex}
+          \vspace{17ex}
+    \item Common Components:
           \begin{itemize}[nosep]
               \item \textbf{Firebase Authentication Service} server, employed in order to perform and enforce authentication.
               \item \textbf{Google Firebase} employed as a data source for the application logic, containing other needed data, such as profile information, in addition to the backup of the health data for each user (see \cref{tab:fr2} FR 2.1) stored in Firebase Storage, Google Firebase service focused on storing user-generated content such as photos, videos, and other types of files.
@@ -126,7 +125,6 @@ Focusing on the system architecture and his design, it can be summarized as foll
               \item A \textbf{Personal Computer} along with his operating system and a web application that allows to interact with the llm on administrator side \textcolor{red}{to adjust recommendation as well as editing sentences that prompt the user into inserting data.}  
           \end{itemize}
 \end{itemize}
-\vspace{3ex}
 
 \noindent In addition to this architecture, the system can be further enriched by integrating a wearable device, that can be a very useful tool to gather data, as previously explained in \cref{sec:wearableDevices}. In this scenario the wearable device will be connected to the smartphone:
 

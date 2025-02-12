@@ -8,15 +8,6 @@ The thesis was realized using the <a href='https://www.latex-project.org/' targe
 
 ### [See The Thesis](thesis.pdf)
 
-# mettere interlinea a 1.5
-\captionsetup{font=scriptsize}:
-\tiny - Smallest size available, approximately 5pt.
-\scriptsize - Slightly larger than \tiny, approximately 7pt.
-\footnotesize - Slightly larger than \scriptsize, approximately 8pt.
-\small - Slightly larger than \footnotesize, approximately 9pt.
-\normalsize - Default size, approximately 10pt (or whatever the document's base size is set to).
-\large - Slightly larger than \normalsize, approximately 12pt.
-
 # Cose che ho fatto solo io
 - Grafico sleep
 - soglia massima per grafici a barre (per activity sleep e food), layout barre sopra soglia e rimossa linea trattegiata per le label
