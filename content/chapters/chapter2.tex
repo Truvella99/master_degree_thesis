@@ -2,10 +2,8 @@
 \section{System Specifications}
 % This section of the elaborate will involve the discussion of the system requirements, as well as how the system have been designed.
 \subsection{System Requirements}
-Given the fact that this project was already existing, it had some implemented features (and consequently some basic requirements related to them), our work was based on extending the app capabilities by implementing new features or refactor existing ones. \newline Considering this aspect, I will classify the functional requirements that regards our work as follows:
-% 
-% ROSSI DA RIVEDERE, SE FACCIAMO ANCHE LE LEZIONI AGGIUNGERE ANCHE QUELLE
-%     
+By defining the system functional requirements, the application key functionalities to implement were identified, by considering also existing applications (see \cref{popularApps}) that represent standards on the health and fitness market. Security, usability as well as other important aspects were considered, leading to the definition of the non-functional requirements. The requirements can be classified as follows:
+\vspace{5ex}
 \begin{table}[h!]
     \setstretch{\myspacing}
     \centering
@@ -13,52 +11,102 @@ Given the fact that this project was already existing, it had some implemented f
         \hline
         \textbf{FR1} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{User Management}} \\
         \hline
-        FR 1.1 & Home Page & Allow a user to enter and also visualize data regarding his emotional state. \\
+        FR 1.1 & Registration & Allow a user to register through google or by defining his credentials. Additionally, allow an user to enter his demographics (age,sex,...) and body (height,weight,...) data when the registration is in progress. \\
         \hline
-        FR 1.2 & Home Page & Allow a user to visualize data on the charts that exceeds the related goals differently (they visually differ from the other ones). \\
+        FR 1.2 & Login Management & Allow a user to log in into his account with the methods that he had setup and allow also to change the password, including the possibility to recover it in case he forgot it.  \\
         \hline
-        FR 1.3 & Health Measures Page & Allow a user to view his vital metrics by using charts organized in different tabs instead of raw values, for a better understanding. \\
-        \hline
-        FR 1.4 & Personal Information Page & Allow a user to provide his personal measures as well as his activity goals, used as upper bound into the charts of the Home Page. \\
-        \hline
-        FR 1.5 & Notification System & Allow a user to receive notification with different frequencies to prompt him into inserting data regarding food, emotional aspect, balance capability, strenght capability. \\
-        \hline
-        FR 1.6 & Assessment & Allow a user to visualize a periodic assessment produced thanks to the data that were previously inserted. \\
-        \hline
-        FR 1.7 & User Registration & Allow a user to enter his demographics (age,sex,...) and body (height,weight,...) data when the registration is in progress. \\
+        FR 1.3 & Account Management & Allow a user to log out from his account, delete it as well as add either google or classic credential method as login method, in case he hadn't used before.  \\
         \hline
     \end{tabular}
-    \caption{Overview of Functional Requirements related to the User Management.}
 \end{table}
 
-\newpage
 
 \begin{table}[h!]
     \setstretch{\myspacing}
     \centering
     \begin{tabular}{|>{\raggedright\arraybackslash}p{0.1\linewidth}|>{\raggedright\arraybackslash}p{0.2\linewidth}|>{\raggedright\arraybackslash}p{0.6\linewidth}|}
         \hline
-        \textbf{FR2} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Data Management}} \\
+        \textbf{FR1} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{User Management}} \\
         \hline
-        FR 2.1 & Data Source Migration & Migrating the main app data source from FitBit Server to Health Connect and Apple Health (Health data management and integration platforms, developed by Google and Apple respectively), while still keeping Google Firebase as additional data source. \\
+        FR 1.4 & Home Page & Allow a user to visualize data regarding his steps, food, sleep and emotional state. Also allow to visualize data that exceeds the user goals differently (they visually differ from the other ones). \\
         \hline
-        FR 2.2 & User Goal Data Integration & Allow a user to retrieve, visualize, insert and edit his goals. \\
+        FR 1.5 & Learn Page & Allow the user to take lessons and then related quizzes to assess their preparation on the topic through the learn page. The user can browse the lesson and his topics, then take the corresponding test if he wants. \\
         \hline
-        FR 2.3 & User Emotional Data Integration & Allow a user to retrieve, visualize and insert his emotional data, based on the selected time period. \\
+        FR 1.6 & Health Measures Page & Allow a user to view his vital metrics by using charts organized in different tabs instead of raw values, for a better understanding. \\
         \hline
-        FR 2.4 & Health Data Backup & Added the necessary logic to perform a backup of the users's health data. \\
+        FR 1.7 & Personal Information Page & Allow a user to edit some of his personal measures (provided at registration time) and add his activity goals, used as upper bound into the charts of the Home Page. \\
         \hline
-        FR 2.5 & Food Data Integration & Allow a user to insert his food data once received the notification. \\
+    \end{tabular}
+    \caption{Overview of Functional Requirements related to the User Management.}
+\end{table}
+
+
+\begin{table}[h!]
+    \setstretch{\myspacing}
+    \centering
+    \begin{tabular}{|>{\raggedright\arraybackslash}p{0.1\linewidth}|>{\raggedright\arraybackslash}p{0.2\linewidth}|>{\raggedright\arraybackslash}p{0.6\linewidth}|}
         \hline
-        FR 2.6 & Emotional Data Integration & Allow a user to insert his emotional data once received the notification. \\
+        \textbf{FR2} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Notification System}} \\
         \hline
-        FR 2.7 & Balance Capability Data Integration & Allow a user to insert his balance capability data once received the notification. \\
+        FR 2.1 & Notification System & Allow a user to receive notification with different frequencies to prompt him into inserting data regarding food, emotional aspect, balance capability, strenght capability. \\
         \hline
-        FR 2.8 & Strenght Capability Data Integration & Allow a user to insert his strength capability data once received the notification. \\
+        FR 2.1 & Notification Parameters & Allow a user to receive notification based on common users parameter, but also personalized based on some personal parameter. \\
+        \hline
+        FR 2.2 & Body Balance Notification & Allow a user to receive notification to prompt him to insert data regarding his balance capability, such as balance test on one leg at a time or tandem walk. \\
+        \hline
+        FR 2.3 & Body Strength Notification & Allow a user to receive notification to prompt him to insert data regarding his strenght capability, such as number of squats, abdominals and push ups, as well as a grip strength test. \\
+        \hline
+        FR 2.4 & Emotional Notification & Allow a user to receive notification to prompt him to insert data regarding his emotional aspect by following the panas guidelines. \\
+        \hline
+        FR 2.5 & Food Notification & Allow a user to receive notification to prompt him into inserting data regarding his consumed food, with this type of notification being more frequent than the others. \\
+        \hline
+        FR 2.6 & Assessment & Allow a user to visualize a periodic assessment produced thanks to the data that were previously inserted. \\
+        \hline
+    \end{tabular}
+    \caption{Overview of Functional Requirements related to the Notification System provided to the User.}
+\end{table}
+
+\begin{table}[h!]
+    \setstretch{\myspacing}
+    \centering
+    \begin{tabular}{|>{\raggedright\arraybackslash}p{0.1\linewidth}|>{\raggedright\arraybackslash}p{0.2\linewidth}|>{\raggedright\arraybackslash}p{0.6\linewidth}|}
+        \hline
+        \textbf{FR3} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Data Management}} \\
+        \hline
+        FR 3.1 & Data Sources & Employing as main app data source Health Connect (Health data management and integration platform developed by Google), while still keeping Google Firebase as additional data source where needed. \\
+        % Health Connect and Apple Health (Health data management and integration platforms, developed by Google and Apple respectively),
+        \hline
+        FR 3.2 & Health Data Source & The system must retrieve and display users' health data relating to steps and sleep on the home page, as well as their heart and lung data in health measures page. \\
+        \hline
+        FR 3.3 & Google Firebase Data Source & The system must retrieve and display users' health data related to emotional state and food on the home page. Also weight, waist circumference, grip, balance and strenght data are retrieved from this data sources and showed in the health measures page. Finally, profile and goals data are also fetched and showed into personal information page. \\
+        \hline
+        FR 3.4 & Health Data Backup & The system must add the necessary logic to perform a backup of the users's health data. \\
         \hline
     \end{tabular}
     \caption{Overview of Functional Requirements related to the Data Management.}
-    \label{tab:fr2}
+    \label{tab:fr3}
+\end{table}
+
+\begin{table}[h!]
+    \setstretch{\myspacing}
+    \centering
+    \begin{tabular}{|>{\raggedright\arraybackslash}p{0.1\linewidth}|>{\raggedright\arraybackslash}p{0.2\linewidth}|>{\raggedright\arraybackslash}p{0.6\linewidth}|}
+        \hline
+        \textbf{FR4} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Admin Management}} \\
+        \hline
+        FR 4.1 & Admin Application & Allow the admin to use a web application in order to modify system metrics. \\
+        \hline
+        FR 4.2 & Login/Logout & Allow the admin to login into the web application, as well as to logout. \\
+        \hline
+        FR 4.3 & Notifications Parameters Edit & Allow the admin to change some of the metrics related to the notification system set up for users. \\
+        \hline
+        % SE FACCIAMO METTERE
+        % FR 4.4 & Application Lessons & Allow the admin to manage the lessons that are provided to the users inside the application. \\
+        % \hline
+        % FR 4.5 & Application Quizzes & Allow the admin to manage the quizzes that corresponds to the lessons and are provided to the users inside the application. \\
+        % \hline
+    \end{tabular}
+    \caption{Overview of Functional Requirements related to the Web Application provided to the Admin.}
 \end{table}
 
 \clearpage
@@ -102,28 +150,27 @@ Focusing on the system architecture and his design, it can be summarized as foll
     \label{fig:systemArchitecture}
 \end{figure*}
 
-\noindent We can clearly distinguish the two main use cases (Android and IOS) with their distinguishing components and the common ones:
+% \noindent We can clearly distinguish the two main use cases (Android and IOS) with their distinguishing components and the common ones:
+\noindent We can identify the architecture with the following components:
 \vspace{3ex}
 \begin{itemize}[nosep] % 'nosep' removes extra spacing between items
-    \item Android Architecture:
-          \begin{itemize}[nosep]
-              \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage the health data on Android, that further interacts with google fit server whenever is needed.
-              \item \textbf{Google Fit} server, used among the health connect app data sources.
-              % Questo eprchè nei settings di health connect si può scegliere se usare google fit e altre sorgenti anche la nostra app c'è
-          \end{itemize}
-    \item IOS Architecture:
-          \begin{itemize}[nosep]
-              \item \textbf{Apple IPhone} that represent the physical smartphone, along with his operating system, our application installed and apple health installed, used to manage the health data on IOS, that interacts with apple health server whenever is needed.
-              \item \textbf{Apple Health} server, used as data source for the apple health application.
-          \end{itemize}
-          \vspace{17ex}
-    \item Common Components:
-          \begin{itemize}[nosep]
-              \item \textbf{Firebase Authentication Service} server, employed in order to perform and enforce authentication.
-              \item \textbf{Google Firebase} employed as a data source for the application logic, containing other needed data, such as profile information, in addition to the backup of the health data for each user (see \cref{tab:fr2} FR 2.1) stored in Firebase Storage, Google Firebase service focused on storing user-generated content such as photos, videos, and other types of files.
-              \item A \textbf{Large Language Model} pre-trained and then fine tuned on the health data of the users employed to generate recommendation for the user. 
-              \item A \textbf{Personal Computer} along with his operating system and a web application that allows to interact with the llm on administrator side \textcolor{red}{to adjust recommendation as well as editing sentences that prompt the user into inserting data.}  
-          \end{itemize}
+    % \item Android Architecture:
+    %       \begin{itemize}[nosep]
+    %           \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage the health data on Android, that further interacts with google fit server whenever is needed.
+    %           \item \textbf{Google Fit} server, used among the health connect app data sources.
+    %           % Questo eprchè nei settings di health connect si può scegliere se usare google fit e altre sorgenti anche la nostra app c'è
+    %       \end{itemize}
+    % \item IOS Architecture:
+    %       \begin{itemize}[nosep]
+    %           \item \textbf{Apple IPhone} that represent the physical smartphone, along with his operating system, our application installed and apple health installed, used to manage the health data on IOS, that interacts with apple health server whenever is needed.
+    %           \item \textbf{Apple Health} server, used as data source for the apple health application.
+    %       \end{itemize}
+    %       \vspace{17ex}
+    \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage the health data on Android, that further interacts with google fit server whenever is needed.
+    \item \textbf{Google Fit} server, used among the health connect app data sources.
+    \item \textbf{Firebase Authentication Service} server, employed in order to perform and enforce authentication.
+    \item \textbf{Google Firebase} employed as a data source for the application logic, containing other needed data, such as profile information, in addition to the backup of the health data for each user (see \cref{tab:fr3} FR 3.4) stored in Firebase Storage.
+    \item A \textbf{Personal Computer} along with his operating system and a web application that allows to interact with the Google Firebase on administrator side, in order to modify the system metrics for users notifications, \textcolor{red}{as well as manage lessons and quizzes that are then showed to the users.}  
 \end{itemize}
 
 \noindent In addition to this architecture, the system can be further enriched by integrating a wearable device, that can be a very useful tool to gather data, as previously explained in \cref{sec:wearableDevices}. In this scenario the wearable device will be connected to the smartphone:
@@ -134,4 +181,5 @@ Focusing on the system architecture and his design, it can be summarized as foll
     \label{fig:systemArchitectureWearables}
 \end{figure*}
 
-\noindent In this case the architecture has been extended with the wearable devices, along with his operating system, that throuugh bluetooth connection can communicate with the smartphone (Android or IOS). On the smartphone side, the wearable application will be able to retrieve the data from the wearable device to then sync with the respective data management service (respectively Health Connect or Apple Health).
+\noindent In this case the architecture has been extended with the wearable devices, along with his operating system, that through bluetooth connection can communicate with the smartphone. On the smartphone side, the wearable application will be able to retrieve the data from the wearable device to then sync with the Health Connect data management service.
+% \noindent In this case the architecture has been extended with the wearable devices, along with his operating system, that through bluetooth connection can communicate with the smartphone (Android or IOS). On the smartphone side, the wearable application will be able to retrieve the data from the wearable device to then sync with the respective data management service (respectively Health Connect or Apple Health).

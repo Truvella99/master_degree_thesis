@@ -1,7 +1,7 @@
 \section{Technology Stack}
 
 \subsection{Framework}
-% se facciamo frontend diventa frameworks con anche react
+% SE METTO FRONTEND DIVENTA FRAMEWORKS CON ANCHE REACT E JAVASCRIPT/NODE ANCHE
 \subsubsection{Flutter}
 
 \begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
@@ -12,7 +12,19 @@
 \end{wrapfigure}
 
 In order to develop the application, the flutter framework was employed. Flutter is an open-source framework created by Google. It allows to build applications that are natively compiled for mobile, web, embedded and desktop from a single codebase. The flutter code compiles into ARM, Intel machine code or JavaScript, depending on the machine for better performance on any device. It gives also the possibility to fine control the layout to be able to create a customized, adaptive designs that look and feel great on any screen. It is also very productive from the developer point of view, thanks to the hot reload feature, that allows to see the changes in real-time without losing any state. The developer experience is also enhanced by automated testing and developer tools that further allow to build production-quality apps. Among these the most relevant are widget and layout inspectors, network and memory profilers, extensive docs, the pub package manager (see \cref{subsubsec:pub}) as well as lots of pre-built widgets and layouts in the SDK. The framework is widely known for its stability and reliability: infact, it is used by Google who made it but also trusted by other well-known brands around the world, and maintained by a community of global developers, giving the possibility to collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help wherever you need it. The framework also offer a seamless integration with google services, allowing to streamline development and reach a wider audience. Among these services Firebase, Google Ads, Google Play, Google Pay, Google Wallet, Google Maps stand out. The framework is based upon Dart (see \cref{subsubsec:dart}) as programming language \cite{Flutter}. To practically use Flutter, just install the Flutter SDK, which includes the full Dart SDK, and then configure any text-editor or integrated development environment (IDE) combined with Flutter's command-line tools. However, most popular options that include also a guided setup are Android Studio, IntelliJ IDEA, and Visual Studio Code \cite{FlutterGetStarted}.
-\newpage  
+
+\newpage
+
+\subsubsection{React}
+
+\begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
+    \captionsetup{font=footnotesize}
+    \centering
+    \includegraphics[width=\linewidth]{images/react.png}
+    \caption{Logo of the React\\Framework.}
+\end{wrapfigure}
+
+In order to develop the application, the flutter framework was employed. Flutter is an open-source framework created by Google. It allows to build applications that are natively compiled for mobile, web, embedded and desktop from a single codebase. The flutter code compiles into ARM, Intel machine code or JavaScript, depending on the machine for better performance on any device. It gives also the possibility to fine control the layout to be able to create a customized, adaptive designs that look and feel great on any screen. It is also very productive from the developer point of view, thanks to the hot reload feature, that allows to see the changes in real-time without losing any state. The developer experience is also enhanced by automated testing and developer tools that further allow to build production-quality apps.
 
 \subsection{Programming Languages}
 \subsubsection{Dart}
@@ -46,18 +58,18 @@ The programming language on which Flutter is based upon and that makes possible 
 
 Groovy is an object-oriented programming language, with dynamic typing for the Java Platform, alternative to the Java language. It can also be employed as a scripting language, intended to manage application automations for the Java Platform. The language also has features similar to languages such as Python, Ruby, Perl, and Smalltalk. Based on the Java platform, the language uses a Java-like syntax, based on curly brackets and is dynamically compiled in bytecode via the Java Virtual Machine. The Groovy compiler can be used to generate standard Java bytecode to interoperate seamlessly on any Java project. Among his features, the interoperability with java (java files are valid groovy files) makes him very versatile, but groovy code can be more compact. It is characterized by object-oriented features (like operator overloading and polymorphic iteration) as well as safe navigation operator \texttt{?.} to check automatically for null pointers. The latest versions add the support to newer features like modularity, static compilation, type checking and mullticatch blocks. Groovy has also native support of markup languages such as XML and HTML by using an inline Document Object Model (DOM) syntax. A Groovy script is fully parsed, compiled, and generated all before execution (similarly to Pyrthon and Ruby) and differently from Java, a groovy source code file can be executed as an uncompiled script under some circumstances\cite{Groovy}. Groovy is also used in the Gradle build system (see \cref{subsubsec:gradle}), which is the official build system for Android applications, and it is used to define the build configuration and dependencies for the android part of the project.  
 
-\subsubsection{Ruby}
+% \subsubsection{Ruby}
 
-\begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
-    \captionsetup{font=footnotesize}
-    \centering
-    \includegraphics[width=\linewidth]{images/ruby.png}
-    \caption{Logo of the Ruby\\Programming\\Language.}
-\end{wrapfigure}
+% \begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
+%     \captionsetup{font=footnotesize}
+%     \centering
+%     \includegraphics[width=\linewidth]{images/ruby.png}
+%     \caption{Logo of the Ruby\\Programming\\Language.}
+% \end{wrapfigure}
 
-Ruby is an high-level, interpreted and general-purpose programming language, designed by having in mind the programmer productivity, simplicity and fun, but also minimizing programmer work and possible confusion. In Ruby, everything is an object, also primitive data types. The language is dynamically typed, uses garbage collection and just-in-time compilation and it is a multi-paradigm programming language by allowing procedural, object-oriented, and functional programming. Since in ruby everything is an object, everything has certain built-in abilities called methods. Every function is a method, methods are always called on an object and methods defined at the top level scope become methods of the object class. Ruby also supports inheritance with dynamic dispatch, mixins and singleton methods, but does not support multiple inheritance. However there is still the possibility for classes to import modules as mixins. Among its other most relevant features we have dynamic and duck typing which allows variables to hold objects of any type and change types at runtime, garbage collection that automatically manages memory, reducing the need for manual memory management and helping prevent memory leaks. Also robust exception handling mechanisms are provided using \texttt{begin,rescue,ensure} and \texttt{raise}, allowing developers to gracefully handle runtime errors, and operator overloading, giving the possiblity to redefine the behavior of operators for their custom classes, providing more intuitive and readable code. Finally, concurrent programming support is enabled through native thread and fibers and a package manager (called RubyGems) is used to provide a standardized way to distribute, install, and manage Ruby libraries and applications\cite{Ruby}. Ruby is also used in the CocoaPods build system (see \cref{subsubsec:cocoapods}), which is the official build system for iOS applications, and it is used to define the build configuration and dependencies for the iOS part of the project.
+% Ruby is an high-level, interpreted and general-purpose programming language, designed by having in mind the programmer productivity, simplicity and fun, but also minimizing programmer work and possible confusion. In Ruby, everything is an object, also primitive data types. The language is dynamically typed, uses garbage collection and just-in-time compilation and it is a multi-paradigm programming language by allowing procedural, object-oriented, and functional programming. Since in ruby everything is an object, everything has certain built-in abilities called methods. Every function is a method, methods are always called on an object and methods defined at the top level scope become methods of the object class. Ruby also supports inheritance with dynamic dispatch, mixins and singleton methods, but does not support multiple inheritance. However there is still the possibility for classes to import modules as mixins. Among its other most relevant features we have dynamic and duck typing which allows variables to hold objects of any type and change types at runtime, garbage collection that automatically manages memory, reducing the need for manual memory management and helping prevent memory leaks. Also robust exception handling mechanisms are provided using \texttt{begin,rescue,ensure} and \texttt{raise}, allowing developers to gracefully handle runtime errors, and operator overloading, giving the possiblity to redefine the behavior of operators for their custom classes, providing more intuitive and readable code. Finally, concurrent programming support is enabled through native thread and fibers and a package manager (called RubyGems) is used to provide a standardized way to distribute, install, and manage Ruby libraries and applications\cite{Ruby}. Ruby is also used in the CocoaPods build system (see \cref{subsubsec:cocoapods}), which is the official build system for iOS applications, and it is used to define the build configuration and dependencies for the iOS part of the project.
 
-\newpage
+% \newpage
 \subsubsection{Yaml for flutter pub package manager}
 
 \begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
@@ -103,47 +115,47 @@ For managing dependencies/plugins in our project on the android part of the proj
     \label{fig:gradleBasics}
 \end{figure*}
 
-\newpage
-\subsubsection{CocoaPods}
-\label{subsubsec:cocoapods}
+% \newpage
+% \subsubsection{CocoaPods}
+% \label{subsubsec:cocoapods}
 
-\begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
-    \captionsetup{font=footnotesize}
-    \centering
-    \includegraphics[width=\linewidth]{images/cocoapods.png}
-    \caption{Logo of the CocoaPods\\Dependency\\Manager.}
-\end{wrapfigure}
+% \begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
+%     \captionsetup{font=footnotesize}
+%     \centering
+%     \includegraphics[width=\linewidth]{images/cocoapods.png}
+%     \caption{Logo of the CocoaPods\\Dependency\\Manager.}
+% \end{wrapfigure}
 
-For managing dependencies/plugins in our project on the android part of the project, cocoapods has been employed. CocoaPods is an application level dependency manager for Objective-C, Swift and other languages that uses Objective-C as runtime (like RubyMotion), is written in Ruby and uses it to manage the dependencies. It provides a standard format for managing external libraries and is inspired by the RubyGems and Bundler combination. CocoaPods is executed through the command line and installs the application dependencies by specifying them rather than copying source files. The dependencies are specified into a text file (Podfile). CocoaPods will then recursively resolves dependencies between libraries and then fetch the needed source code. His dependency resolution system is powered by Molinillo, which is also used by other large projects such as Bundler and RubyGems\cite{CocoaPods}.
+% For managing dependencies/plugins in our project on the android part of the project, cocoapods has been employed. CocoaPods is an application level dependency manager for Objective-C, Swift and other languages that uses Objective-C as runtime (like RubyMotion), is written in Ruby and uses it to manage the dependencies. It provides a standard format for managing external libraries and is inspired by the RubyGems and Bundler combination. CocoaPods is executed through the command line and installs the application dependencies by specifying them rather than copying source files. The dependencies are specified into a text file (Podfile). CocoaPods will then recursively resolves dependencies between libraries and then fetch the needed source code. His dependency resolution system is powered by Molinillo, which is also used by other large projects such as Bundler and RubyGems\cite{CocoaPods}.
 
-\begin{figure}[h]
-    \centering
-    \begin{lstlisting}[
-        language=, % Leave empty since it is not a predefined language
-        basicstyle=\ttfamily,
-        keywordstyle=\color{blue},
-        commentstyle=\color{green},
-        stringstyle=\color{red},
-        showstringspaces=false,
-        breaklines=true,
-        frame=none, % No border
-        numbers=none % No line numbers
-    ]
-    platform :ios, '13.0'
-    use_frameworks!
+% \begin{figure}[h]
+%     \centering
+%     \begin{lstlisting}[
+%         language=, % Leave empty since it is not a predefined language
+%         basicstyle=\ttfamily,
+%         keywordstyle=\color{blue},
+%         commentstyle=\color{green},
+%         stringstyle=\color{red},
+%         showstringspaces=false,
+%         breaklines=true,
+%         frame=none, % No border
+%         numbers=none % No line numbers
+%     ]
+%     platform :ios, '13.0'
+%     use_frameworks!
 
-    target 'MyApp' do
-        pod 'Alamofire', '~> 5.6'
-        pod 'SwiftyJSON', '~> 5.0'
+%     target 'MyApp' do
+%         pod 'Alamofire', '~> 5.6'
+%         pod 'SwiftyJSON', '~> 5.0'
 
-        target 'MyAppTests' do
-            inherit! :search_paths
-        end
-    end
-    \end{lstlisting}
-\end{figure}
+%         target 'MyAppTests' do
+%             inherit! :search_paths
+%         end
+%     end
+%     \end{lstlisting}
+% \end{figure}
 
-\noindent As a practical example this POD file can be considered. It sets the minimum iOS version, enables frameworks, and adds Alamofire and SwiftyJSON as dependencies to handle networking and JSON parsing respectively.
+% \noindent As a practical example this POD file can be considered. It sets the minimum iOS version, enables frameworks, and adds Alamofire and SwiftyJSON as dependencies to handle networking and JSON parsing respectively.
 
 \newpage
 \subsection{Integrated Development Environment}
@@ -193,13 +205,54 @@ As a result of the massive involvement of artificial intelligence and cloud comp
     \includegraphics[width=1.0\linewidth]{./images/gemini.png}
     \caption{Example of the Gemini feature usage through the tab in android studio.}
 \end{figure*}
+\newpage
 \subsection{Dependencies}
-\subsubsection{Library1 Involved}
-\subsubsection{Library2 Involved}
-\subsection{Integrations}
-\subsubsection{Google Firebase}
-Firebase Authentication Service
-Google Firebase Storage
-Google Firebase RealTime Database
-\subsubsection{Health Connect}
-\subsubsection{Apple Health}
+This section will cover the major dependecies that have been used in the project to adapt the existing functionalities and implement the new ones.
+
+% \subsubsection{fl\_chart}
+% The first library employed was fl\_chart, used to implement data visualization through the usage of intuitive charts. The library is highly customizable and supports several types of chart, like bar chart, pie chart, scatter chart ,line and multiline chart and radar chart. Among them we mainly employed bar, line and multiline chart for our purposes. The employed version is the 0.67.0.
+
+% \begin{figure*}
+%     \centering
+%     \begin{minipage}{0.3\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{./images/bar_chart_sample.png}
+%     \end{minipage}
+%     \begin{minipage}{0.3\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{./images/line_chart_sample.png}
+%     \end{minipage}
+%     \begin{minipage}{0.3\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{./images/multiline_chart_sample.png}
+%     \end{minipage}
+%     \caption[Example of the three main chart types employed in the application.]{Example of the three main chart types employed in the application. \protect\cite{FlChart}.}
+%     \label{fig:three_images}
+% \end{figure*}
+
+\subsubsection{health}
+Another crucial library was health, used to fetch health data from the devices to successfully use them. This library is a wrapper for Apple's HealthKit on iOS and Google's Health Connect on Android, and enables reading and writing operations from/to Apple Health and Google Health Connect. All the library functionalities are managed through a singleton \texttt{Health} instance, which supports lots of operations. \newline However, for our purposes, we mainly exploited: 
+
+\begin{itemize}[nosep] % 'nosep' removes extra spacing between items
+    \item Permission handling operations to access health data, through the \texttt{hasPermissions} method to check the permissions and the \texttt{requestAuthorization} method to request them.
+    \item Read operations (through the \texttt{getHealthDataFromTypes} method) to read the needed health data.
+\end{itemize}
+
+\noindent No write operations have been adopted, as the wearables or applications adopted by the users are synchronized and write data directly to Apple's HealthKit or Google's Health Connect, since they constitute the standard for the respective platforms: from them health will then retrieve the data. The employed version is the 11.1.0 \cite{Health}.
+
+\subsubsection{workmanager}
+
+\subsubsection{firebase\_storage}
+\subsubsection{awesome\_notifications}
+
+\subsubsection{firebase\_crashlytics}
+% https://pub.dev/packages/firebase_crashlytics
+\subsubsection{firebase\_performance}
+% https://pub.dev/packages/firebase_performance
+
+\subsection{Google Firebase}
+\subsubsection{Firebase Authentication Service}
+\subsubsection{Google Firebase Storage}
+\subsubsection{Google Firebase RealTime Database}
+% \subsubsection{Health Connect}
+% \subsubsection{Apple Health}
