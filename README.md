@@ -29,6 +29,24 @@ biber thesis
 pdflatex thesis.tex
 pdflatex thesis.tex
 ```
+Firebase hosts its various products on different servers and infrastructure, often leveraging the broader Google Cloud Platform (GCP) services. Here's a breakdown of some of the primary Firebase products and their hosting infrastructure:
+
+1. **Firebase Authentication**: This service might utilize dedicated servers to manage user authentication and identity services, often integrating with Google's identity platform.
+
+2. **Firebase Realtime Database**: This is a NoSQL database hosted on servers that are optimized for low-latency, real-time data synchronization. The infrastructure is designed to handle real-time updates and large-scale data operations.
+
+3. **Cloud Firestore**: This is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud Platform. Cloud Firestore can be hosted on servers distributed across multiple data centers to ensure high availability and low latency.
+
+4. **Firebase Cloud Storage**: This service uses Google Cloud Storage under the hood. It provides a powerful, simple, and cost-effective object storage service built for Google scale. Data is stored on Google Cloud's infrastructure, which is distributed across multiple regions and data centers.
+
+5. **Firebase Cloud Messaging (FCM)**: This service likely uses dedicated servers optimized for sending and receiving messages across platforms. It integrates with Google's infrastructure to ensure reliable message delivery.
+
+6. **Firebase Hosting**: Firebase Hosting provides fast and secure static hosting for web apps. It leverages Google's global content delivery network (CDN) to ensure quick and reliable delivery of content.
+
+7. **Firebase Functions**: These are serverless functions hosted on Google Cloud Functions infrastructure. They allow you to run backend code in response to events triggered by Firebase features and HTTPS requests.
+
+### Summary:
+While Firebase products are hosted on separate servers and infrastructure tailored to their specific needs, they generally leverage the robust and scalable infrastructure provided by Google Cloud Platform. This ensures high reliability, security, and performance for developers using Firebase services.
 
 # Mettere in implementazione come strategia utilizzata
 @article{WearableDevicesOsDiffusion,

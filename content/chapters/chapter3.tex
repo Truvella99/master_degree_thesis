@@ -1,7 +1,7 @@
 \section{Technology Stack}
 
-\subsection{Framework}
-% SE METTO FRONTEND DIVENTA FRAMEWORKS CON ANCHE REACT E JAVASCRIPT/NODE ANCHE
+\subsection{Frameworks}
+
 \subsubsection{Flutter}
 
 \begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
@@ -11,7 +11,7 @@
     \caption{Logo of the Flutter\\Framework.}
 \end{wrapfigure}
 
-In order to develop the application, the flutter framework was employed. Flutter is an open-source framework created by Google. It allows to build applications that are natively compiled for mobile, web, embedded and desktop from a single codebase. The flutter code compiles into ARM, Intel machine code or JavaScript, depending on the machine for better performance on any device. It gives also the possibility to fine control the layout to be able to create a customized, adaptive designs that look and feel great on any screen. It is also very productive from the developer point of view, thanks to the hot reload feature, that allows to see the changes in real-time without losing any state. The developer experience is also enhanced by automated testing and developer tools that further allow to build production-quality apps. Among these the most relevant are widget and layout inspectors, network and memory profilers, extensive docs, the pub package manager (see \cref{subsubsec:pub}) as well as lots of pre-built widgets and layouts in the SDK. The framework is widely known for its stability and reliability: infact, it is used by Google who made it but also trusted by other well-known brands around the world, and maintained by a community of global developers, giving the possibility to collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help wherever you need it. The framework also offer a seamless integration with google services, allowing to streamline development and reach a wider audience. Among these services Firebase, Google Ads, Google Play, Google Pay, Google Wallet, Google Maps stand out. The framework is based upon Dart (see \cref{subsubsec:dart}) as programming language \cite{Flutter}. To practically use Flutter, just install the Flutter SDK, which includes the full Dart SDK, and then configure any text-editor or integrated development environment (IDE) combined with Flutter's command-line tools. However, most popular options that include also a guided setup are Android Studio, IntelliJ IDEA, and Visual Studio Code \cite{FlutterGetStarted}.
+In order to develop the mobile application, the flutter framework was employed. Flutter is an open-source framework created by Google. It allows to build applications that are natively compiled for mobile, web, embedded and desktop from a single codebase. The flutter code compiles into ARM, Intel machine code or JavaScript, depending on the machine for better performance on any device. It gives also the possibility to fine control the layout to be able to create a customized, adaptive designs that look and feel great on any screen. It is also very productive from the developer point of view, thanks to the hot reload feature, that allows to see the changes in real-time without losing any state. The developer experience is also enhanced by automated testing and developer tools that further allow to build production-quality apps. Among these the most relevant are widget and layout inspectors, network and memory profilers, extensive docs, the pub package manager (see \cref{subsubsec:pub}) as well as lots of pre-built widgets and layouts in the SDK. The framework is widely known for its stability and reliability: infact, it is used by Google who made it but also trusted by other well-known brands around the world, and maintained by a community of global developers, giving the possibility to collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help wherever you need it. The framework also offer a seamless integration with google services, allowing to streamline development and reach a wider audience. Among these services Firebase, Google Ads, Google Play, Google Pay, Google Wallet, Google Maps stand out. The framework is based upon Dart (see \cref{subsubsec:dart}) as programming language \cite{Flutter}. To practically use Flutter, just install the Flutter SDK, which includes the full Dart SDK, and then configure any text-editor or integrated development environment (IDE) combined with Flutter's command-line tools. However, most popular options that include also a guided setup are Android Studio, IntelliJ IDEA, and Visual Studio Code \cite{FlutterGetStarted}.
 
 \newpage
 
@@ -24,8 +24,8 @@ In order to develop the application, the flutter framework was employed. Flutter
     \caption{Logo of the React\\Framework.}
 \end{wrapfigure}
 
-In order to develop the application, the flutter framework was employed. Flutter is an open-source framework created by Google. It allows to build applications that are natively compiled for mobile, web, embedded and desktop from a single codebase. The flutter code compiles into ARM, Intel machine code or JavaScript, depending on the machine for better performance on any device. It gives also the possibility to fine control the layout to be able to create a customized, adaptive designs that look and feel great on any screen. It is also very productive from the developer point of view, thanks to the hot reload feature, that allows to see the changes in real-time without losing any state. The developer experience is also enhanced by automated testing and developer tools that further allow to build production-quality apps.
-
+In order to develop the web application, the react framework was employed. React is an open-source javascript library that aims to build user interfaces based on components. Maintained by facebook, his main advantage lies on the fact that it only re-renders those parts of the page that have changed, avoiding unnecessary re-rendering of unchanged DOM elements through the usage of the Virtual DOM, used as an in-memory data-structure cache to compute the resulting differences. The framework adheres to the declarative programming paradigm: the developer design views for each state of an application, and react will handle update and render of the components when some data changes. Among react main characteristics we have the components, which are modular and can be reused: a react application comes with many layers of components, rendered to a root element in the DOM using the react DOM library. These components are tipically written in JSX (an extension to the JavaScript language syntax). Also react hooks are a core features, which are essentially functions that let developers "hook into" react state and lifecycle features from function components. They have specific rules (like they can be called only at the top level and form react function) and some built-in hooks are already provided, like \texttt{useState, useEffect}. Since react does not come with built-in support for routing, third-party libraries can be used to handle routing (define routes, manage navigation, and handle URL changes) as well as other client-side functionalities \cite{React}. 
+\newpage
 \subsection{Programming Languages}
 \subsubsection{Dart}
 \label{subsubsec:dart}
@@ -46,6 +46,17 @@ The programming language on which Flutter is based upon and that makes possible 
 \end{figure*}
 
 \noindent As we can see from \cref{fig:dartPlatforms}, the devices covered by a single code base range from embedded device architectures to mobile and laptop devices (by using Dart VM with just-in-time (JIT) compilation and an ahead-of-time (AOT) compiler) to web applications, with his web compiler that translate Dart into JavaScript or WebAssembly. Additionally, the language is type safe, so it uses static type checking to ensure that a variable's value always matches the variable's static type. This is done without sacrificing flexibility, since the language still permits the use of a dynamic type combined with runtime checks, which can be useful during experimentation or for code that needs to be especially dynamic, through the usage of the \texttt{dynamic} keyword. The language has also built-in null safety, so values can't be null unless the programmer explicitly say they can be. In this way dart can protect from null exceptions at runtime through static code analysis. Unlike other null-safe languages, this non-nullability is also retained at runtime, so if dart determines that a variable is non-nullable, that variable can never be null. The language also comes with a mature and complete \texttt{async-await} syntax for UI with event-driven code, all paired with a concurrency system based on dart isolates (separates memory-isolated threads of execution used to achieve concurrency). Dart comes with a rich set of libraries, ranging from core libraries (\texttt{dart:core}) from the ones to parse json (\texttt{dart:convert}), for concurrency (\texttt{dart:isolate}), web (\texttt{package:web}) and so on \cite{Dart}.
+
+\subsubsection{Javascript}
+
+\begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
+    \captionsetup{font=footnotesize}
+    \centering
+    \includegraphics[width=\linewidth]{images/javascript.png}
+    \caption{Logo of the Javascript\\Language.}
+\end{wrapfigure}
+
+Javascript is a high-level, often just-in-time compiled language that represents the core technology to build web applications. Among his characteristics has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It comes with APIs to work with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). JavaScript is a single-threaded language, based on the event loop approach. The runtime processes messages from a queue one at a time, and it calls a function associated with each new message, creating a call stack frame with the function's arguments and local variables, which will shrink and grow based on the function's needs. When the call stack is empty and the function completed, javascript proceeds to the next message in the queue. In order to execute javascript code, a software component that executes the code called javascript engine is needed. These engines are tipically developed by web browser vendors: infact, they tipically provide a runtime system, to enable interaction with a broader environment. The runtime system includes the necessary APIs for input/output operations, such as networking, storage, and graphics, and provides the ability to import scripts \cite{Javascript}.
 
 \subsubsection{Groovy}
 
@@ -69,7 +80,7 @@ Groovy is an object-oriented programming language, with dynamic typing for the J
 
 % Ruby is an high-level, interpreted and general-purpose programming language, designed by having in mind the programmer productivity, simplicity and fun, but also minimizing programmer work and possible confusion. In Ruby, everything is an object, also primitive data types. The language is dynamically typed, uses garbage collection and just-in-time compilation and it is a multi-paradigm programming language by allowing procedural, object-oriented, and functional programming. Since in ruby everything is an object, everything has certain built-in abilities called methods. Every function is a method, methods are always called on an object and methods defined at the top level scope become methods of the object class. Ruby also supports inheritance with dynamic dispatch, mixins and singleton methods, but does not support multiple inheritance. However there is still the possibility for classes to import modules as mixins. Among its other most relevant features we have dynamic and duck typing which allows variables to hold objects of any type and change types at runtime, garbage collection that automatically manages memory, reducing the need for manual memory management and helping prevent memory leaks. Also robust exception handling mechanisms are provided using \texttt{begin,rescue,ensure} and \texttt{raise}, allowing developers to gracefully handle runtime errors, and operator overloading, giving the possiblity to redefine the behavior of operators for their custom classes, providing more intuitive and readable code. Finally, concurrent programming support is enabled through native thread and fibers and a package manager (called RubyGems) is used to provide a standardized way to distribute, install, and manage Ruby libraries and applications\cite{Ruby}. Ruby is also used in the CocoaPods build system (see \cref{subsubsec:cocoapods}), which is the official build system for iOS applications, and it is used to define the build configuration and dependencies for the iOS part of the project.
 
-% \newpage
+\newpage
 \subsubsection{Yaml for flutter pub package manager}
 
 \begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
@@ -83,12 +94,12 @@ YAML is a data serialization language that is human readable. His common usage r
 
 \newpage
 \subsection{Automation Dependencies Tools}
-While dependency management on the project was mainly done by using the pub package manager (see \cref{subsubsec:pub}), native Android/iOS plugins require Gradle (Android) and CocoaPods (iOS) behind the scenes as additional tools. In this section these tools and their functionalities will be covered.
+% While dependency management on the project was mainly done by using the pub package manager (see \cref{subsubsec:pub}), native Android/iOS plugins require Gradle (Android) and CocoaPods (iOS) behind the scenes as additional tools. In this section these tools and their functionalities will be covered.
 
 \subsubsection{Pub Package Manager}
 \label{subsubsec:pub}
 
-For managing dependencies in our project at the project level, the pub package manager has been employed. It uses a \texttt{.yaml} file (pubspec.yaml) to list the dependencies and has a command-line interface that works both for flutter framework and dart programming language (in our case we exploited it with flutter). The syntax is relatively simple and it works by using the \texttt{pub} command followed by a subcommand. \newline There are several subcommands that are divided into three main categories, based on functionalities\cite{Pub}:
+For managing flutter dependencies in our project, the pub package manager has been employed. It uses a \texttt{.yaml} file (pubspec.yaml) to list the dependencies and has a command-line interface that works both for flutter framework and dart programming language (in our case we exploited it with flutter). The syntax is relatively simple and it works by using the \texttt{pub} command followed by a subcommand. \newline There are several subcommands that are divided into three main categories, based on functionalities\cite{Pub}:
 \vspace{3ex}
 \begin{itemize}[nosep]
     \item \textbf{Managing Package Dependencies:} in this category the most relevant are the \texttt{get} or \texttt{upgrade} commands, that respectively fetch or upgrade the dependencies that are used by a package. Also other commandss are available, like \texttt{downgrade} to downgrade the dependencies at their lowest version for testing, or dually \texttt{upgrade} that upgrades the dependencies to their highest version. 
@@ -107,13 +118,24 @@ For managing dependencies in our project at the project level, the pub package m
     \caption{Logo of the Gradle\\Automation\\Tool.}
 \end{wrapfigure}
 
-For managing dependencies/plugins in our project on the android part of the project, gradle has been employed. Gradle is a build automation tool for software development which uses either Groovy or Java/Kotlin as language (in our case we leveraged on Groovy). It offers support for all phases of a build process, from compilation to verification, dependency resolving but also test execution, source code generation, packaging and publishing. Gradle is a multi-language tool, supporting languages like Java, Kotlin, Groovy, Scala, C, C++ and Javascript. Gradle operates with his own domain-specific language in contrast with the maven approach with XML. It has been designed to handle multi-project builds, that can be very large. Infact, it supports a series of build tasks that can run serially or in parallel, and build components can be also cached. Regarding his main features, gradle follows a convention (folder structure of the project, standard tasks and their order as well as dependency repositories) over configuration approach, all the build phases can be described in short configuration files. All conventions can still be overriden if it is necessary. One crucial gradle component is the plugin, that allow to integrate a set of configurations and tasks into a project, and can be either downloaded from a central plugin repository or custom-developed\cite{Gradle}.
+For managing dependencies/plugins in our project on the android side, gradle has been employed. Gradle is a build automation tool for software development which uses either Groovy or Java/Kotlin as language (in our case we leveraged on Groovy). It offers support for all phases of a build process, from compilation to verification, dependency resolving but also test execution, source code generation, packaging and publishing. Gradle is a multi-language tool, supporting languages like Java, Kotlin, Groovy, Scala, C, C++ and Javascript. Gradle operates with his own domain-specific language in contrast with the maven approach with XML. It has been designed to handle multi-project builds, that can be very large. Infact, it supports a series of build tasks that can run serially or in parallel, and build components can be also cached. Regarding his main features, gradle follows a convention (folder structure of the project, standard tasks and their order as well as dependency repositories) over configuration approach, all the build phases can be described in short configuration files. All conventions can still be overriden if it is necessary. One crucial gradle component is the plugin, that allow to integrate a set of configurations and tasks into a project, and can be either downloaded from a central plugin repository or custom-developed\cite{Gradle}.
 
 \begin{figure*}
     \includegraphics[width=1.0\linewidth]{./images/gradle_basics.png}
     \caption[Gradle operating flow.]{Gradle operating flow \protect\cite{GradleBasics}.}
     \label{fig:gradleBasics}
 \end{figure*}
+
+\subsubsection{Npm}
+
+\begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
+    \captionsetup{font=footnotesize}
+    \centering
+    \includegraphics[width=\linewidth]{images/npm.png}
+    \caption{Logo of the NPM\\Automation\\Tool.}
+\end{wrapfigure}
+
+For managing dependencies/plugins in our project on the web side, npm has been employed. Npm is a package manager for the JavaScript programming language and the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client interface and an online database of public and paid-for private packages, called the npm registry. The command line client interface allows users to consume and distribute JavaScript modules that are available in the registry and the available packages can be browsed and searched via the npm website. When used as a dependency manager for a local project, npm can install, in one command, all the dependencies of a project through the \texttt{package.json} file. Inside this file each dependency can specify a range of valid versions: this to allow developers to auto-update their packages and at the same time avoiding unwanted breaking changes. Npm also provides the \texttt{package-lock.json} file which has the entry of the exact version used by the project after evaluating semantic versioning in package.json.  \cite{NPM}.
 
 % \newpage
 % \subsubsection{CocoaPods}
@@ -157,7 +179,6 @@ For managing dependencies/plugins in our project on the android part of the proj
 
 % \noindent As a practical example this POD file can be considered. It sets the minimum iOS version, enables frameworks, and adds Alamofire and SwiftyJSON as dependencies to handle networking and JSON parsing respectively.
 
-\newpage
 \subsection{Integrated Development Environment}
 
 \begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
@@ -167,8 +188,9 @@ For managing dependencies/plugins in our project on the android part of the proj
     \caption{Logo of the Android\\Studio IDE.}
 \end{wrapfigure}
 
-As Integrated Development Environment for the project, Android Studio has been employed. Android Studio is the official IDE for Android app development, but it seamlessly supports flutter through the flutter plugin. Based upon JetBrains' IntelliJ IDEA software, it inherite most of his features (like code completion, refactoring, debugging but also built-in tools and a plugin ecosystem). These features, combined with the fact that it is available for download for windows, macOs and linux, has helped to make it one of the most used IDE (together with VsCode) on this field. Android Studio is licensed under the Apache license but it ships with some SDK updates that are under a non-free license, so it is not completely open source. The supported languages are Java, Kotlin (the actual Google's preferred language for Android app development), C++ and more with extensions, such as Go and Dart\cite{AndroidStudio}. 
+As Integrated Development Environment for the mobile application, Android Studio has been employed. Android Studio is the official IDE for Android app development, but it seamlessly supports flutter through the flutter plugin. Based upon JetBrains' IntelliJ IDEA software, it inherite most of his features (like code completion, refactoring, debugging but also built-in tools and a plugin ecosystem). These features, combined with the fact that it is available for download for windows, macOs and linux, has helped to make it one of the most used IDE (together with VsCode) on this field. Android Studio is licensed under the Apache license but it ships with some SDK updates that are under a non-free license, so it is not completely open source. The supported languages are Java, Kotlin (the actual Google's preferred language for Android app development), C++ and more with extensions, such as Go and Dart\cite{AndroidStudio}. 
 
+\newpage
 \subsubsection{Core features}
 % compose design tools alla fine dato che esula un po
 Several are the core features, based on IntelliJ Idea and then further extended and enriched, that made this IDE a de-facto standard on mobile development:
@@ -205,9 +227,33 @@ As a result of the massive involvement of artificial intelligence and cloud comp
     \includegraphics[width=1.0\linewidth]{./images/gemini.png}
     \caption{Example of the Gemini feature usage through the tab in android studio.}
 \end{figure*}
+
+\subsection{Code Editor}
+
+\begin{wrapfigure}{l}{0.18\textwidth} % 'l' for left alignment, width of the wrapped area
+    \captionsetup{font=footnotesize}
+    \centering
+    \includegraphics[width=\linewidth]{images/vs_code.png}
+    \caption{Logo of the VsCode\\Code Editor.}
+\end{wrapfigure}
+
+In order to develop the web application part of the system, VsCode was employed. VsCode is a fully-customizable code editor that streamline the development experience with features like IntelliSense, debugging and web version. It allows to install extensions to add additional services and customize itself. VsCode is fully customizable, with the possibility to change theme colors and defining customization profiles and easily switch between them. Also sync settings across VsCode instances on different devices is possible. It supports almost every major programming language and given to his lightweight nature and portability, can run also on the web browser. It comes also with a built-in terminal and git version control support, and more recently also artificial intelligence support was added through the copilot extension, that allows to edit multiple file through copilot, given a description of what we want to build as well as giving code suggestions, that can be either accepted or rejected \cite{VsCode}. 
 \newpage
+\subsection{Google Firebase}
+Google Firebase is a backend comprehensive solution that allows to build, deploy and run an application. It comes with already-made extensions for common use cases, and it is easy to integrate on iOS, Android, and Web. It is a platform developed by Google, composed of several services, each one with a specific purpose: the employed services used for satisfy the system requirements will be covered.
+\subsubsection{Authentication Service}
+The Firebase Authentication service allows to perform a simple, multi-platform sign-in by providing backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users. It provides an easy authentication system by supporting several platforms and authentication methods (email and password accounts, phone auth, and Google, Apple, Facebook and more). It also simplifies the sign-in and onboarding experience for end users thanks to FirebaseUI Auth component, that implement the best practices for authentication on mobile devices and websites. It allows to setup a working authentication system for an application in under 10 lines of code, including account merging, and applies Google's internal expertise into adopting a comprehensive security system \cite{FirebaseAuthentication}.
+\subsubsection{Cloud Firestore Database}
+The Cloud Firestore Database service is a NoSQL document database that allows to store, sync, and query data for an application on a global scale. Given the fact that is a NoSQL database, it lets strcture the data freely with collections and documents and easily retrieve them by using expressive queries. It allows to build serverless app through a mobile and web SDKs and a comprehensive set of security rules, but it still provide support for traditional client libraries like Node and Python. It comes with a notification system that communicates data changes to easily build collaborative experiences and realtime apps, and also with an offline mode so that users can change their data at any time. The system (powered by Google's storage infrastructure) is fully scalable, allowing to focus on the application without worrying about servers and consistency. Finally, the declarative security language and the integration with firebase authentication allows to setup a strong user-based security \cite{CloudFirestore}.
+\subsubsection{Cloud Storage}
+The Cloud Storage is a powerful, simple, and cost-effective service that allow through the client SDKs to store images, audio, video, or other user-generated content. Is designed to store and serve contents quickly and easily. It is a scalable service, allowing to effortlessly grow from prototype to production and automatically scale up computing resources with cloud functions. Also with this service, a strong user-based security is enforced with an integration with firebase authentication through the SDK APIs for Cloud Storage \cite{CloudStorage}.
+\subsubsection{Performance Monitoring}
+The Performance Monitoring service, available both for mobile and web applications, allows to measure app network requests, screen rendering times, as well as custom and automated traces and gain insights of the app performance. This tool allows to keep track of the permormance on different app versions as new features are delivered or configuration changes are made, with a dashboard that makes easy to focus on the most important metrics. A monitoring of data like app version and device allows to understand how the app performs from the users' point of view. There is the possibility to closely monitor HTTP/S requests by analyzing response time, success rate as well as payload size, particularly useful for critical requests. Thanks to that, understand where performance issues take place and address them is easier \cite{PerformanceMonitoring}.
+\subsubsection{Crashlytics}
+The Crashlytics service, integrable with mobile and unity apps, allows to obtain a real time crash and error report and analysis to help keep the apps running flawlessly. The tool starts capturing crashes and groups them into manageable issues based on the impact on real users,so that it is easier to prioritize what to fix first. AI-powered insights helps understand why a crash happened and help to get to the root cause faster. Crashlytics works seamlessly with industry-standard tools including Jira, Slack, BigQuery, and with integrations for Android Studio it is possible to view the data directly in the IDE, making it easy to debug crashes. Contextual informations about the crashes are displayed, like the timeline of events leading up to app crashes to quickly reproduce bugs and uncover the root cause \cite{Crashlytics}.
+
 \subsection{Dependencies}
-This section will cover the major dependecies that have been used in the project to adapt the existing functionalities and implement the new ones.
+This section will cover the major dependencies with a focus on background features and firebase that have been used in the project.
 
 % \subsubsection{fl\_chart}
 % The first library employed was fl\_chart, used to implement data visualization through the usage of intuitive charts. The library is highly customizable and supports several types of chart, like bar chart, pie chart, scatter chart ,line and multiline chart and radar chart. Among them we mainly employed bar, line and multiline chart for our purposes. The employed version is the 0.67.0.
@@ -231,28 +277,32 @@ This section will cover the major dependecies that have been used in the project
 % \end{figure*}
 
 \subsubsection{health}
-Another crucial library was health, used to fetch health data from the devices to successfully use them. This library is a wrapper for Apple's HealthKit on iOS and Google's Health Connect on Android, and enables reading and writing operations from/to Apple Health and Google Health Connect. All the library functionalities are managed through a singleton \texttt{Health} instance, which supports lots of operations. \newline However, for our purposes, we mainly exploited: 
+The health library was used to fetch health data from the devices to successfully use them. This library is a wrapper for Apple's HealthKit on iOS and Google's Health Connect on Android, and enables reading and writing operations from/to Apple Health and Google Health Connect. All the library functionalities are managed through a singleton \texttt{Health} instance, which supports lots of operations. \newline However, for our purposes, we mainly exploited: 
 
 \begin{itemize}[nosep] % 'nosep' removes extra spacing between items
     \item Permission handling operations to access health data, through the \texttt{hasPermissions} method to check the permissions and the \texttt{requestAuthorization} method to request them.
     \item Read operations (through the \texttt{getHealthDataFromTypes} method) to read the needed health data.
 \end{itemize}
 
-\noindent No write operations have been adopted, as the wearables or applications adopted by the users are synchronized and write data directly to Apple's HealthKit or Google's Health Connect, since they constitute the standard for the respective platforms: from them health will then retrieve the data. The employed version is the 11.1.0 \cite{Health}.
+\noindent No write operations have been adopted, as the wearables or applications adopted by the users are synchronized and write data directly to Google's Health Connect, since it constitute the standard: from it health will then retrieve the data. The employed version is the 11.1.0 \cite{Health}.
 
 \subsubsection{workmanager}
-
-\subsubsection{firebase\_storage}
+The workmanager library, used to perform the health data backup (see \cref{tab:fr3} FR 3.4), is a powerful solution for managing background tasks in Flutter applications. It allows to schedule and execute tasks even when the app is not actively running, useful for tasks such as periodic data synchronization, notifications, and other background operations. The package provides a simple API to schedule background tasks at specific intervals or under certain conditions, with the possibility to specify retry policies for failed tasks, ensuring robustness in the face of temporary issues. These tasks are executed efficiently, having minimal impact on the device resources and battery life. The employed version is the 0.5.2 \cite{Workmanager}.
 \subsubsection{awesome\_notifications}
+The awesome notifications library, used to implement the notification system for the users (see \cref{tab:fr2} FR 3.4), allows to implement custom local and push notifications on Flutter with real-time events. It allows to keep the user ingaged, thanks to the possibility of creating notifications with different layouts, images, sounds and so on. Real-time events are deelivered at Flutter level code, leaving the possibility to the programmer to handle them. It gives the possibility of scheduling periodic or single notifications, is easy-to-use and highly customizable, including also the possibility to translation (see \cref{tab:nfr} NFR8). The employed version is the 0.10.0 \cite{AwesomeNotifications}.
+\subsubsection{firebase}
+Regarding firebase, given the variety of services that it offers, several dependencies have been employed in the project to cover all the functionalities needed:
 
-\subsubsection{firebase\_crashlytics}
-% https://pub.dev/packages/firebase_crashlytics
-\subsubsection{firebase\_performance}
-% https://pub.dev/packages/firebase_performance
+\begin{itemize}[nosep] % 'nosep' removes extra spacing between items
+    \item \textbf{firebase\_core\:} the base dependency for the firebase services, and it is required to use the Firebase Core API, which enables connecting to multiple Firebase apps. The employed version is the 3.6.0.
+    \item \textbf{firebase\_auth\:} dependency enabling classic authentication with email/password as well as identity providers like Google, Facebook and Twitter through the Firebase Authentication API. The employed version is the 5.3.1.
+    \item \textbf{firebase\_ui\_auth}, a dependency that provides pre-built widgets, already integrated with the variety of the Firebase Auth providers. The employed version is the 1.10.0.
+    \item \textbf{firebase\_ui\_oauth\_google}, a dependency that allows to authenticate with Google through Oauth protocol, by spcifying it as authentication provider. The employed version is the 1.12.14.
+    \item \textbf{firebase\_storage\:} dependency for Firebase Cloud Storage service, allowing to easily store and retrieve files from it through the Firebase Cloud Storage API. The employed version is the 12.3.4.
+    \item \textbf{firebase\_crashlytics\:} dependency for Firebase Crashlytics that allows, through the Firebase Crashlytics API usage, to report uncaught errors to the Firebase console. The employed version is the 4.3.3.
+    \item \textbf{firebase\_performance\:} dependency for Google Performance Monitoring for Firebase, allowing to monitor traces and HTTP/S network requests and their parameters (like response time) through the Firebase Performance API. The employed version is the 0.10.1+3.
+\end{itemize}
 
-\subsection{Google Firebase}
-\subsubsection{Firebase Authentication Service}
-\subsubsection{Google Firebase Storage}
-\subsubsection{Google Firebase RealTime Database}
+\noindent Regarding the related web application dependencies, only the \textbf{firebase} dependency has been employed, giving access to both authentication and cloud firestore database, in order to perform the operations. The employed version is the 11.3.1.
+
 % \subsubsection{Health Connect}
-% \subsubsection{Apple Health}

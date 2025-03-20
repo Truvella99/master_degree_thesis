@@ -64,6 +64,7 @@ By defining the system functional requirements, the application key functionalit
         \hline
     \end{tabular}
     \caption{Overview of Functional Requirements related to the Notification System provided to the User.}
+    \label{tab:fr2}
 \end{table}
 
 \begin{table}[h!]
@@ -122,7 +123,7 @@ By defining the system functional requirements, the application key functionalit
         \hline
         NFR1 & Reliability & The system should ensure at least 80\% accuracy and functionality over the course of a year. \\
         \hline
-        NFR2 & Portability & The application must be capable of running on Android and IOS devices. \\
+        NFR2 & Portability & The application must be capable of running on Android devices. \\
         \hline
         NFR3 & Security & Robust login mechanisms should be implemented to protect user data and limit access only to authorized individuals. \\
         \hline
@@ -140,10 +141,28 @@ By defining the system functional requirements, the application key functionalit
         \hline
     \end{tabular}
     \caption{Overview of Non-Functional Requirements related to the system.}
+    \label{tab:nfr}
 \end{table}
 \newpage
-\subsection{System Architecture And Design}
-Focusing on the system architecture and his design, it can be summarized as follows:
+\subsection{System Design and Architecture}
+\subsubsection{System Design}
+
+While designing the system, the main components have been chosen in order to provide a clear and intuitive application system, as well as a robust and secure backend.
+\newline For the frontend application part, cross-platform frameworks have been analyzed, having in mind the possibility to extend the application also to IOS platform. Flutter, React Native and Xamarin were considered, but Flutter has been chosen, thanks to the possibility to develop a single codebase for both Android and IOS, and also for his strong support by Google who created it, that makes it a stable and reliable system, as well as a big community and an official package repository where tons of libraries can be found. Considering the web application, among several frameworks available (like React, Angular, Vue.js) React has been chosen, given his diffusion, simplicity and modularity.   
+\newline Regarding the backend part, different alternatives were considered, also based on the frontend and our requirements:
+\begin{itemize}[nosep] % 'nosep' removes extra spacing between items
+    \item \textbf{AWS Amplify}, set of tools and services provided by Amazon Web Services (AWS) to build secure and scalable mobile applications. It comes with a suite of services that streamline the development process, like authentication, storage, GraphQL and REST APIs as well as analytics. 
+    \item \textbf{Express}, fast and minimalist web framework built on top of Node.js which is a javascript runtime.
+    \item \textbf{Microsoft Azure}, cloud computing service that provides a wide range of cloud services, like analytics, storage, and networking. It allows developers to build, deploy, and manage applications through Microsoft-managed data centers.
+    \item \textbf{Spring Boot}, a Java-based framework used to create stand-alone, production-grade applications, which simplifies the development of new applications by providing code and configuration through annotations.
+    \item \textbf{Firebase}, comprehensive app development platform by Google that provides a variety of tools and services to help developers build high-quality apps quickly.
+\end{itemize}
+\newpage
+\noindent Among them, Express was immediately discarded despite its simplicity, because it mainly focuses an APIs, does not provide authentication and it is not as rich of services as the others, so it does not fit our needs. Spring Boot was also discarded, given the need to setup external service for authentication (like keycloak IAM) and maintain a server where the backend could run. AWS Amplify and Microsoft Azure were also closer to our needs, but Firebase was chosen, thanks to his Flutter support and seamless integration (since bith made by Google) and thanks to the variety of services it provides: Cloud Firestore as a data source, the Authentication system, Cloud Storage system as well as a suite of analytics service to monitor the application (Analytics, Performance, Crashlytics).
+% TODO: se ne parlo mettere Release Monitoring).
+\subsubsection{System Architecture}
+
+Focusing on the system architecture, it can consequently be summarized as follows:
 \begin{figure*}
     \includegraphics[width=1.0\linewidth]{./images/system_architecture.jpeg}
     \caption{Overview of the System Architecture.}
@@ -151,28 +170,20 @@ Focusing on the system architecture and his design, it can be summarized as foll
 \end{figure*}
 
 % \noindent We can clearly distinguish the two main use cases (Android and IOS) with their distinguishing components and the common ones:
+\newpage
 \noindent We can identify the architecture with the following components:
 \vspace{3ex}
 \begin{itemize}[nosep] % 'nosep' removes extra spacing between items
-    % \item Android Architecture:
-    %       \begin{itemize}[nosep]
-    %           \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage the health data on Android, that further interacts with google fit server whenever is needed.
-    %           \item \textbf{Google Fit} server, used among the health connect app data sources.
-    %           % Questo eprchè nei settings di health connect si può scegliere se usare google fit e altre sorgenti anche la nostra app c'è
-    %       \end{itemize}
-    % \item IOS Architecture:
-    %       \begin{itemize}[nosep]
-    %           \item \textbf{Apple IPhone} that represent the physical smartphone, along with his operating system, our application installed and apple health installed, used to manage the health data on IOS, that interacts with apple health server whenever is needed.
-    %           \item \textbf{Apple Health} server, used as data source for the apple health application.
-    %       \end{itemize}
-    %       \vspace{17ex}
-    \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage the health data on Android, that further interacts with google fit server whenever is needed.
-    \item \textbf{Google Fit} server, used among the health connect app data sources.
-    \item \textbf{Firebase Authentication Service} server, employed in order to perform and enforce authentication.
-    \item \textbf{Google Firebase} employed as a data source for the application logic, containing other needed data, such as profile information, in addition to the backup of the health data for each user (see \cref{tab:fr3} FR 3.4) stored in Firebase Storage.
-    \item A \textbf{Personal Computer} along with his operating system and a web application that allows to interact with the Google Firebase on administrator side, in order to modify the system metrics for users notifications, \textcolor{red}{as well as manage lessons and quizzes that are then showed to the users.}  
+    \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage in an unified way the health data on Android.
+    % , that further interacts with google fit server whenever is needed.
+    % \item \textbf{Google Fit} server, used among the health connect app data sources.
+    \item \textbf{Cloud Firestore Database} server, firebase service employed as a data source for the application logic, containing needed data, such as profile information.
+    \item \textbf{Firebase Authentication} server, firebase service employed in order to perform and enforce authentication.
+    \item \textbf{Cloud Storage} server, firebase service employed to store the backup of the health data for each user (see \cref{tab:fr3} FR 3.4).
+    \item A \textbf{Personal Computer} along with his operating system and a web application that allows to authenticate and to interact with the Cloud Firestore Database on administrator side, in order to modify the system metrics for users notifications, as well as manage lessons and quizzes that are then showed to the users.  
 \end{itemize}
 
+\newpage
 \noindent In addition to this architecture, the system can be further enriched by integrating a wearable device, that can be a very useful tool to gather data, as previously explained in \cref{sec:wearableDevices}. In this scenario the wearable device will be connected to the smartphone:
 
 \begin{figure*}
@@ -183,3 +194,4 @@ Focusing on the system architecture and his design, it can be summarized as foll
 
 \noindent In this case the architecture has been extended with the wearable devices, along with his operating system, that through bluetooth connection can communicate with the smartphone. On the smartphone side, the wearable application will be able to retrieve the data from the wearable device to then sync with the Health Connect data management service.
 % \noindent In this case the architecture has been extended with the wearable devices, along with his operating system, that through bluetooth connection can communicate with the smartphone (Android or IOS). On the smartphone side, the wearable application will be able to retrieve the data from the wearable device to then sync with the respective data management service (respectively Health Connect or Apple Health).
+\newpage
