@@ -160,18 +160,18 @@ While designing the system, the main components have been chosen in order to pro
 \newpage
 \noindent Among them, Express was immediately discarded despite its simplicity, because it mainly focuses an APIs, does not provide authentication and it is not as rich of services as the others, so it does not fit our needs. Spring Boot was also discarded, given the need to setup external service for authentication (like keycloak IAM) and maintain a server where the backend could run. AWS Amplify and Microsoft Azure were also closer to our needs, but Firebase was chosen, thanks to his Flutter support and seamless integration (since bith made by Google) and thanks to the variety of services it provides: Cloud Firestore as a data source, the Authentication system, Cloud Storage system as well as a suite of analytics service to monitor the application (Analytics, Performance, Crashlytics).
 % TODO: se ne parlo mettere Release Monitoring).
-\subsubsection{System Architecture}
+\subsubsection{System Core Architecture}
 
-Focusing on the system architecture, it can consequently be summarized as follows:
+Focusing on the system core architecture, it can consequently be summarized as follows:
 \begin{figure*}
     \includegraphics[width=1.0\linewidth]{./images/system_architecture.jpeg}
-    \caption{Overview of the System Architecture.}
+    \caption{Overview of the System Core Architecture.}
     \label{fig:systemArchitecture}
 \end{figure*}
 
 % \noindent We can clearly distinguish the two main use cases (Android and IOS) with their distinguishing components and the common ones:
 \newpage
-\noindent We can identify the architecture with the following components:
+\noindent We can identify the core architecture with the following components:
 \vspace{3ex}
 \begin{itemize}[nosep] % 'nosep' removes extra spacing between items
     \item \textbf{Android Phone} that represent the physical smartphone, along with his operating system, our application installed and health connect installed, used to manage in an unified way the health data on Android.
@@ -182,7 +182,7 @@ Focusing on the system architecture, it can consequently be summarized as follow
     \item \textbf{Cloud Storage} server, firebase service employed to store the backup of the health data for each user (see \cref{tab:fr3} FR 3.4).
     \item A \textbf{Personal Computer} along with his operating system and a web application that allows to authenticate and to interact with the Cloud Firestore Database on administrator side, in order to modify the system metrics for users notifications, as well as manage lessons and quizzes that are then showed to the users.  
 \end{itemize}
-
+% Firebase Performance Monitoring and Crashlytics diagnostica quindi non core
 \newpage
 \noindent In addition to this architecture, the system can be further enriched by integrating a wearable device, that can be a very useful tool to gather data, as previously explained in \cref{sec:wearableDevices}. In this scenario the wearable device will be connected to the smartphone:
 
