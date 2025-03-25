@@ -17,6 +17,8 @@ By defining the system functional requirements, the application key functionalit
         \hline
         FR 1.3 & Account Management & Allow a user to log out from his account, delete it as well as add either google or classic credential method as login method, in case he hadn't used before.  \\
         \hline
+        FR 1.4 & Home Page & Allow a user to visualize data regarding his steps, food, sleep and emotional state. Also allow to visualize data that exceeds the user goals differently (they visually differ from the other ones). \\
+        \hline
     \end{tabular}
 \end{table}
 
@@ -28,8 +30,6 @@ By defining the system functional requirements, the application key functionalit
         \hline
         \textbf{FR1} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{User Management}} \\
         \hline
-        FR 1.4 & Home Page & Allow a user to visualize data regarding his steps, food, sleep and emotional state. Also allow to visualize data that exceeds the user goals differently (they visually differ from the other ones). \\
-        \hline
         FR 1.5 & Learn Page & Allow the user to take lessons and then related quizzes to assess their preparation on the topic through the learn page. The user can browse the lesson and his topics, then take the corresponding test if he wants. \\
         \hline
         FR 1.6 & Health Measures Page & Allow a user to view his vital metrics by using charts organized in different tabs instead of raw values, for a better understanding. \\
@@ -40,30 +40,25 @@ By defining the system functional requirements, the application key functionalit
     \caption{Overview of Functional Requirements related to the User Management.}
 \end{table}
 
-
 \begin{table}[h!]
     \setstretch{\myspacing}
     \centering
     \begin{tabular}{|>{\raggedright\arraybackslash}p{0.1\linewidth}|>{\raggedright\arraybackslash}p{0.2\linewidth}|>{\raggedright\arraybackslash}p{0.6\linewidth}|}
         \hline
-        \textbf{FR2} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Notification System}} \\
+        \textbf{FR2} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Admin Management}} \\
         \hline
-        FR 2.1 & Notification System & Allow a user to receive notification with different frequencies to prompt him into inserting data regarding food, emotional aspect, balance capability, strenght capability. \\
+        FR 2.1 & Admin Application & Allow the admin to use a web application in order to modify system metrics. \\
         \hline
-        FR 2.1 & Notification Parameters & Allow a user to receive notification based on common users parameter, but also personalized based on some personal parameter. \\
+        FR 2.2 & Login/Logout & Allow the admin to login into the web application, as well as to logout. \\
         \hline
-        FR 2.2 & Body Balance Notification & Allow a user to receive notification to prompt him to insert data regarding his balance capability, such as balance test on one leg at a time or tandem walk. \\
+        FR 2.3 & Notifications Parameters Edit & Allow the admin to change some of the metrics related to the notification system set up for users. \\
         \hline
-        FR 2.3 & Body Strength Notification & Allow a user to receive notification to prompt him to insert data regarding his strenght capability, such as number of squats, abdominals and push ups, as well as a grip strength test. \\
+        FR 2.4 & Application Lessons & Allow the admin to manage the lessons that are provided to the users inside the application. \\
         \hline
-        FR 2.4 & Emotional Notification & Allow a user to receive notification to prompt him to insert data regarding his emotional aspect by following the panas guidelines. \\
-        \hline
-        FR 2.5 & Food Notification & Allow a user to receive notification to prompt him into inserting data regarding his consumed food, with this type of notification being more frequent than the others. \\
-        \hline
-        FR 2.6 & Assessment & Allow a user to visualize a periodic assessment produced thanks to the data that were previously inserted. \\
+        FR 2.5 & Application Quizzes & Allow the admin to manage the quizzes that corresponds to the lessons and are provided to the users inside the application. \\
         \hline
     \end{tabular}
-    \caption{Overview of Functional Requirements related to the Notification System provided to the User.}
+    \caption{Overview of Functional Requirements related to the Web Application provided to the Admin.}
     \label{tab:fr2}
 \end{table}
 
@@ -72,19 +67,24 @@ By defining the system functional requirements, the application key functionalit
     \centering
     \begin{tabular}{|>{\raggedright\arraybackslash}p{0.1\linewidth}|>{\raggedright\arraybackslash}p{0.2\linewidth}|>{\raggedright\arraybackslash}p{0.6\linewidth}|}
         \hline
-        \textbf{FR3} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Data Management}} \\
+        \textbf{FR3} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Notification System}} \\
         \hline
-        FR 3.1 & Data Sources & Employing as main app data source Health Connect (Health data management and integration platform developed by Google), while still keeping Google Firebase as additional data source where needed. \\
-        % Health Connect and Apple Health (Health data management and integration platforms, developed by Google and Apple respectively),
+        FR 3.1 & Notification System & Allow a user to receive notification with different frequencies to prompt him into inserting data regarding food, emotional aspect, balance capability, strenght capability. \\
         \hline
-        FR 3.2 & Health Data Source & The system must retrieve and display users' health data relating to steps and sleep on the home page, as well as their heart and lung data in health measures page. \\
+        FR 3.2 & Notification Parameters & Allow a user to receive notification based on common users parameter, but also personalized based on some personal parameter. \\
         \hline
-        FR 3.3 & Google Firebase Data Source & The system must retrieve and display users' health data related to emotional state and food on the home page. Also weight, waist circumference, grip, balance and strenght data are retrieved from this data sources and showed in the health measures page. Finally, profile and goals data are also fetched and showed into personal information page. \\
+        FR 3.3 & Body Balance Notification & Allow a user to receive notification to prompt him to insert data regarding his balance capability, such as balance test on one leg at a time or tandem walk. \\
         \hline
-        FR 3.4 & Health Data Backup & The system must add the necessary logic to perform a backup of the users's health data. \\
+        FR 3.4 & Body Strength Notification & Allow a user to receive notification to prompt him to insert data regarding his strenght capability, such as number of squats, abdominals and push ups, as well as a grip strength test. \\
+        \hline
+        FR 3.5 & Emotional Notification & Allow a user to receive notification to prompt him to insert data regarding his emotional aspect by following the panas guidelines. \\
+        \hline
+        FR 3.6 & Food Notification & Allow a user to receive notification to prompt him into inserting data regarding his consumed food, with this type of notification being more frequent than the others. \\
+        \hline
+        FR 3.7 & Assessment & Allow a user to visualize a periodic assessment produced thanks to the data that were previously inserted. \\
         \hline
     \end{tabular}
-    \caption{Overview of Functional Requirements related to the Data Management.}
+    \caption{Overview of Functional Requirements related to the Notification System provided to the User.}
     \label{tab:fr3}
 \end{table}
 
@@ -93,21 +93,20 @@ By defining the system functional requirements, the application key functionalit
     \centering
     \begin{tabular}{|>{\raggedright\arraybackslash}p{0.1\linewidth}|>{\raggedright\arraybackslash}p{0.2\linewidth}|>{\raggedright\arraybackslash}p{0.6\linewidth}|}
         \hline
-        \textbf{FR4} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Admin Management}} \\
+        \textbf{FR4} & \multicolumn{2}{>{\centering\arraybackslash}p{0.7\linewidth}|}{\textbf{Data Management}} \\
         \hline
-        FR 4.1 & Admin Application & Allow the admin to use a web application in order to modify system metrics. \\
+        FR 4.1 & Data Sources & Employing as main app data source Health Connect (Health data management and integration platform developed by Google), while still keeping Google Firebase as additional data source where needed. \\
+        % Health Connect and Apple Health (Health data management and integration platforms, developed by Google and Apple respectively),
         \hline
-        FR 4.2 & Login/Logout & Allow the admin to login into the web application, as well as to logout. \\
+        FR 4.2 & Health Data Source & The system must retrieve and display users' health data relating to steps and sleep on the home page, as well as their heart and lung data in health measures page. \\
         \hline
-        FR 4.3 & Notifications Parameters Edit & Allow the admin to change some of the metrics related to the notification system set up for users. \\
+        FR 4.3 & Google Firebase Data Source & The system must retrieve and display users' health data related to emotional state and food on the home page. Also weight, waist circumference, grip, balance and strenght data are retrieved from this data sources and showed in the health measures page. Finally, profile and goals data are also fetched and showed into personal information page. \\
         \hline
-        % SE FACCIAMO METTERE
-        % FR 4.4 & Application Lessons & Allow the admin to manage the lessons that are provided to the users inside the application. \\
-        % \hline
-        % FR 4.5 & Application Quizzes & Allow the admin to manage the quizzes that corresponds to the lessons and are provided to the users inside the application. \\
-        % \hline
+        FR 4.4 & Health Data Backup & The system must add the necessary logic to perform a backup of the users's health data. \\
+        \hline
     \end{tabular}
-    \caption{Overview of Functional Requirements related to the Web Application provided to the Admin.}
+    \caption{Overview of Functional Requirements related to the Data Management.}
+    \label{tab:fr4}
 \end{table}
 
 \clearpage
@@ -179,7 +178,7 @@ Focusing on the system core architecture, it can consequently be summarized as f
     % \item \textbf{Google Fit} server, used among the health connect app data sources.
     \item \textbf{Cloud Firestore Database} server, firebase service employed as a data source for the application logic, containing needed data, such as profile information.
     \item \textbf{Firebase Authentication} server, firebase service employed in order to perform and enforce authentication.
-    \item \textbf{Cloud Storage} server, firebase service employed to store the backup of the health data for each user (see \cref{tab:fr3} FR 3.4).
+    \item \textbf{Cloud Storage} server, firebase service employed to store the backup of the health data for each user (see \cref{tab:fr4} FR 4.4).
     \item A \textbf{Personal Computer} along with his operating system and a web application that allows to authenticate and to interact with the Cloud Firestore Database on administrator side, in order to modify the system metrics for users notifications, as well as manage lessons and quizzes that are then showed to the users.  
 \end{itemize}
 % Firebase Performance Monitoring and Crashlytics diagnostica quindi non core

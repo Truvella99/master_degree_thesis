@@ -3,13 +3,14 @@
   \newpage
   \phantomsection % Ensures the correct link location
   \section*{\headerFont{Bibliography}} % Customize the size and title here
+  \singlespacing
 }
 
 \phantomsection % Ensures the correct link location
 \printbibliography
 \addcontentsline{toc}{section}{Bibliography} % Adds Bibliography to ToC
 
-\newgeometry{top=1.2cm,right=3.3cm} % Set custom margins for the LoF
+\newgeometry{top=1.2cm,left=\myleftmargin,right=\myrightmargin} % Set custom margins for the LoF
 % Custom command to display the List of Figures
 \begingroup
   \phantomsection % Create anchor for ToC entry
