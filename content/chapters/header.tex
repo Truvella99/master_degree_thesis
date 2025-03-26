@@ -63,11 +63,15 @@
     
 \end{titlepage}
 
-\begin{titlepage}
+\newpage
 \begin{spacing}{\myspacing}
+    \clearpage
+    \pagenumbering{arabic}  % Switch to Arabic numbers after front matter
+    \setcounter{page}{2}
+    \pagestyle{plain}  % Ensure page numbers appear
     \input{content/abstract_summary/abstract.tex}
 \end{spacing}
 
+\newpage
 \tableofcontents
-
-\end{titlepage}
+\newpage
