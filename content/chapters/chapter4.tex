@@ -220,6 +220,7 @@ As explained previously (see \cref{subsubsec:cloudFirestoreDatabase}) an additio
 \end{figure*}
 
 \subsection{Health Data Backup with Cloud Storage}
+\label{subsec:backup}
 In order to perform the backup of the health data and satisfy the related requirement (see \cref{tab:fr4}), the cloud storage service has been employed. The main reason lies behind the fact that health data can be pretty large, so using the Cloud Firestore Database to store them would be inefficient and expensive. For this reason the health data are stored on the cloud storage into JSON files, one for each backup. The backup task is performed thanks to the flutter workmanager library by running a background task in background, allowing to execute the backup even if the mobile app is not opened or actively used in that moment. However, since these tasks run on a separate background isolate, retrieving the health data directly there is not possible due to permission issues.
 \noindent For this reason, the backup implementation is structured into three phases:
 \begin{enumerate}[nosep] % 'nosep' removes extra spacing between items
