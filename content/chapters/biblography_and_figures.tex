@@ -11,7 +11,7 @@
 \addcontentsline{toc}{section}{Bibliography} % Adds Bibliography to ToC
 
 \begingroup
-  \newgeometry{top=0cm,left=\myleftmargin,right=\myrightmargin} % Set custom margins for the LoF
+  \newgeometry{top=0.5cm,left=\myleftmargin,right=\myrightmargin,bottom=\mybottommargin} % Set custom margins for the LoF
   % Custom command to display the List of Figures
   \begin{spacing}{\myspacing}
     \begingroup
@@ -25,6 +25,6 @@
 \endgroup
 % To have good margin on the second page of the list of figures
 \clearpage
-\newgeometry{top=\mytopmargin,left=\myleftmargin,right=\myrightmargin} % Adjust top margin for the second page
+\newgeometry{top=0.5cm,left=\myleftmargin,right=\myrightmargin} % Adjust top margin for the second page
 
 \restoregeometry
