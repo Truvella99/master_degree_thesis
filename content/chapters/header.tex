@@ -62,12 +62,15 @@
     \restoregeometry %restor default margins 
     
 \end{titlepage}
-
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
 \newpage
 \begin{spacing}{\myspacing}
     \clearpage
     \pagenumbering{arabic}  % Switch to Arabic numbers after front matter
-    \setcounter{page}{2}
+    \setcounter{page}{3}
     \pagestyle{plain}  % Ensure page numbers appear
     \input{content/abstract_summary/abstract.tex}
 \end{spacing}

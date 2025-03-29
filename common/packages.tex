@@ -21,14 +21,14 @@
     {}
     {\addspace\printtext[brackets]{\printlist{pageref}}}%
     \finentry}
-% Redefine \cite to make text and number blue
+% Redefine \cite to make text and number black
 \usepackage{xcolor} % for color
 \usepackage{etoolbox}
 \usepackage{hyperref} % for hyperlinks
 \makeatletter
 \let\oldcite\cite
 \AtBeginDocument{
-    \renewcommand{\cite}[1]{\textcolor{blue}{\hypersetup{citecolor=blue}\oldcite{#1}}}
+    \renewcommand{\cite}[1]{\textcolor{black}{\hypersetup{citecolor=black}\oldcite{#1}}}
 }
 \makeatother
 
@@ -82,46 +82,46 @@
 \usepackage{hyperref} % must be loaded before glossaries-extra
 \usepackage{cleveref}
 
-% ------------------ \cref REDEFINITION with blue color (only link now) -----------------------------
+% ------------------ \cref REDEFINITION with black color (only link now) -----------------------------
 % ------------------ NORMAL -----------------------------
 \crefformat{figure}{
     \unskip\textcolor{black}{ % fig. text color
-        fig.~#2\textcolor{blue}{#1}#3} % reference number color
+        fig.~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
 \crefformat{table}{
     \unskip\textcolor{black}{ % table text color
-        table~#2\textcolor{blue}{#1}#3} % reference number color
+        table~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
 \crefformat{section}{
     \unskip\textcolor{black}{ % section text color
-        section~#2\textcolor{blue}{#1}#3} % reference number color
+        section~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
 \crefformat{equation}{
     \unskip\textcolor{black}{ % equation text color
-        eq.~#2\textcolor{blue}{#1}#3} % reference number color
+        eq.~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
 % ------------------ CAPITALIZED -----------------------------
 \Crefformat{figure}{
     \unskip\textcolor{black}{ % Fig. text color
-        Fig.~#2\textcolor{blue}{#1}#3} % reference number color
+        Fig.~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
 \Crefformat{table}{
     \unskip\textcolor{black}{ % Table text color
-        Table~#2\textcolor{blue}{#1}#3} % reference number color
+        Table~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
 \Crefformat{section}{
     \unskip\textcolor{black}{ % Section text color
-        Section~#2\textcolor{blue}{#1}#3} % reference number color
+        Section~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
 \Crefformat{equation}{
     \unskip\textcolor{black}{ % Eq. text color
-        Eq.~#2\textcolor{blue}{#1}#3} % reference number color
+        Eq.~#2\textcolor{black}{#1}#3} % reference number color
     \unskip
 }
