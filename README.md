@@ -5,3 +5,5 @@ The technological stack used is <a href='https://dart.dev/' target='_blank'>Dart
 <br> The thesis was realized using the <a href='https://www.latex-project.org/' target='_blank'>Latex</a> language and <a href='https://code.visualstudio.com/' target='_blank'>VsCode</a> as text editor.
 
 ### [See The Thesis](thesis.pdf)
+
+### [See The Thesis Presentation](thesis_presentation.pdf)
